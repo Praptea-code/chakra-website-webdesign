@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keyword" content="impact of technology, Watch Industry, Chakra">
+    <meta name="description" content="About the team of Chakra" />
+    <meta name="author" content="Chakra's Team">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../css/style.css"><!--linking external css-->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            /*padding and border is included making measuring easy*/
+        }
+
+        .backgroundimg {
+            background-image: url('../img/bgabout.png');
+            /*inserting a background image*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            width: 100%;
+        }
+
+        .backgroundimg p:hover {
+            color: maroon;
+            /* When you hover over the text, it'll turn maroon. */
+        }
+
+        .backgroundimg p {
+            font-size: 80px;
+            /* Making the text pretty big. */
+            color: aliceblue;
+            /* Soft light blue color for the text. */
+            text-align: center;
+            /* Centers the text. */
+            padding-top: 90px;
+            /* Adds space at the top so it's not too close to the edge. */
+        }
+
+        body {
+            background-color: black;
+            /* Setting the background of the page to black. */
+        }
+
+        .aboutusbody1 {
+            display: flex;
+            /* We're using flexbox for this layout. */
+            justify-content: space-evenly;
+            /* Spacing the items evenly across the page. */
+            padding: 30px 30px 90px 30px;
+            /* Adding padding on all sides, more on the bottom. */
+        }
+
+        .part1:hover {
+            transform: scale(1.05);
+            /* Makes the element grow a bit when hovered. */
+            transition: transform 3 ease;
+            /* Smoothly animates the zoom effect. */
+        }
+
+        .part1 {
+            height: 300px;
+            /* Giving this element a fixed height. */
+            width: 300px;
+            /* Giving it the same width to make it a square. */
+            background-color: whitesmoke;
+            /* Light gray background. */
+            border-radius: 10%;
+            /* Rounded corners for a softer look. */
+            text-align: justify;
+            /* Justifying the text inside. */
+            padding: 25px;
+            /* Padding inside for some breathing room. */
+        }
+
+        hr {
+            margin: auto;
+            /* Centers the horizontal rule. */
+            width: 700px;
+            /* Sets the width of the horizontal line. */
+        }
+
+        .aboutusbody2 {
+            text-align: center;
+            /* Center the text here too. */
+            font-family: cursive;
+            /* Using a cursive font for a more playful feel. */
+            font-style: italic;
+            /* Making it italic. */
+            font-size: 30px;
+            /* A medium-large font size. */
+            padding: 20px;
+            /* Some padding to space things out. */
+        }
+
+        .aboutusbody2:hover {
+            color: maroon;
+            /* When hovered, text turns maroon. */
+        }
+
+        .aboutusbody3 {
+            color: whitesmoke;
+            /* White text on a dark background for contrast. */
+            padding: 50px 80px 50px 80px;
+            /* Padding on all sides, more on left and right. */
+            text-align: center;
+            /* Centering the text. */
+            font-size: 30px;
+            /* A nice large font size. */
+        }
+
+        .OurTeam0,
+        .OurTeam1,
+        .OurTeam2,
+        .OurTeam3 {
+            display: flex;
+            /* Again using flexbox for team member layout. */
+            justify-content: space-evenly;
+            /* Evenly spaced out the team members. */
+            font-size: 20px;
+            /* Smaller text size here. */
+            color: azure;
+            /* Light blue color for text. */
+            padding: 40px;
+            /* Padding around each section. */
+        }
+
+        a {
+            font-size: 40px;
+            /* A large font size for links. */
+            text-decoration: none;
+            /* Removing underlines from links. */
+            color: beige;
+            /* Beige color for the links. */
+        }
+
+        .OurTeam0 p:hover,
+        .OurTeam1 p:hover,
+        .OurTeam2 p:hover,
+        .OurTeam3 p:hover {
+            color: maroon;
+            /* Links turn maroon when hovered. */
+        }
+
+        .OurTeam0 img,
+        .OurTeam1 img,
+        .OurTeam2 img,
+        .OurTeam3 img {
+            height: 400px;
+            /* Setting a fixed height for the images. */
+            width: 400px;
+            /* Setting a fixed width. */
+            padding-right: 80px;
+            /* Adds space to the right of each image. */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/logo.png"
+                    alt="Chakra Logo" /></a><!-- Logo section, clicking on the logo takes you to the homepage -->
+        </div>
+        <nav class="main-nav">
+            <!-- Main navigation menu -->
+            <a href="../index.html">Home</a><!-- Home page link -->
+            <a href="./Product.html">Products</a><!-- Products page link -->
+            <a href="./blog.html">Blog</a>
+            <!-- Blog page link -->
+            <a href="./research.html">Research</a><!-- Research page link -->
+            <a href="./about.html">About Us</a><!-- About Us page link -->
+            <div class="cart-icon" onclick="toggleCart()">
+                <!-- Shopping cart icon  triggers toggleCart function when clicked -->
+                <img src="../img/cart2.jpg" alt="Shopping Cart Icon" />
+                <span id="cartCount">0</span><!-- Shows the number of items in the cart initially 0-->
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="backgroundimg">
+            <p style="font-size: 20px;">chakra</p>
+            <p style="padding-top:0px ;">ABOUT US</p>
+        </div>
+        <div class="aboutusbody1">
+            <div>
+                <img style="height: 280px;" src="../img/aboutuswatch.png">
+            </div>
+            <div class="part1"><!--Reasons why we should be customers priority-->
+                <h2>Introduction</h2>
+                <p>
+                    Thank you for visiting Chakra! We have been creating fashionable, dependable, and eye-catching
+                    timepieces since 1998. In addition to telling the time, our pieces express your individuality and
+                    enhance your sense of style by fusing classic design with contemporary accuracy.
+                </p>
+            </div>
+            <div class="part1">
+                <h2>What We Stand For</h2>
+                <p>
+                    At Chakra, we value excellence, fine craftsmanship, and lowering the cost of luxury. Everywhere
+                    feasible, eco friendly materials are used in the design of our watches to ensure sustainability.
+                    Knowing that every piece is made to last and serve you well, we work hard to design things that feel
+                    as beautiful as they look.
+                </p>
+            </div>
+            <div class="part1">
+                <h2>Why us?</h2>
+                <p>
+                    We provide premium, reasonably priced timepieces that suit all tastes, from bold to minimalist. We
+                    make sure every watch is not just a useful accessory but also a true representation of your taste
+                    thanks to our attention to detail and dedication to quality. Additionally, our customer first
+                    philosophy guarantees that you will always feel appreciated.
+                </p>
+            </div>
+        </div>
+        <div class="aboutusbody2">
+            <hr>
+            <br>
+            <p style="color: white;"><b>Chakra</b>: Where every moment tells a story!</p>
+            <br>
+            <hr>
+        </div>
+        <div class="aboutusbody3">
+            <p>A group of enthusiastic designers, innovators, and artists are responsible for every tick of a Chakra
+                watch. Our team combines a variety of skills and a common commitment to creating inspirational watches.
+                Get to know the hearts and minds that propel Chakra ahead.</p>
+        </div>
+    </section>
+    <section>
+        <p style="font-size: 60px; color: beige;font-weight: 900;padding-top: 50px; text-align: center;" id="team">OUR
+            TEAM</p>
+        <p style="text-align: center;padding-bottom: 50px;color:maroon;">(Click name or image of members for C.V.)</p>
+        <div class="OurTeam0">
+            <div class="photo1">
+                <a href="./cvpb.html"><img src="../img/prapti.jpeg"></a>
+            </div>
+            <div><!--Team members and their contribution-->
+                <a href="./cvpb.html">
+                    <p>Prapti : Leader</p>
+                </a><!--member1-->
+                <ul>
+                    <li>Created the brand's logo and chose the color theme</li>
+                    <li>Crafted the home and about us page by blending aesthetics</li>
+                    <li>Finalized the documentation and helped in research page as well</li>
+                    <li>Passionate about creativity and bringing ideas to life.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="OurTeam1">
+            <div>
+                <a href="./cvkk.html">
+                    <p>Khrishman</p>
+                </a> <!--member2-->
+                <ul>
+                    <li>The backbone of the team's problem-solving</li>
+                    <li>Created the blog page,nav,footer of website and feedback form</li>
+                    <li>Used JavaScript in home,product and feedback pages</li>
+                    <li>Our most experienced member</li>
+                </ul>
+            </div>
+            <div class="photo2">
+                <a href="./cvkk.html"><img style="margin-right: 0%;" src="../img/krishman.jpeg"></a>
+            </div>
+        </div>
+        <div class="OurTeam2">
+            <div class="photo1">
+                <a href="./cvnm.html"><img src="../img/niskarsha.jpeg"></a>
+            </div>
+            <div>
+                <a href="./cvnm.html">
+                    <p>Nishkarsa</p>
+                </a><!--member3-->
+                <ul>
+                    <li>Helped in documentation</li>
+                    <li>Created the product page and wireframes</li>
+                    <li>Designed a new product specifications page which added clarity</li>
+                    <li>Known as the most dedicated and enthusiastic member</li>
+                </ul>
+            </div>
+        </div>
+        <div class="OurTeam3">
+            <div>
+                <a href="./cvbr.html">
+                    <p>Balaram</p>
+                </a><!--member4-->
+                <ul>
+                    <li>Team's source of ideas </li>
+                    <li>Created the C.V. section and research page</li>
+                    <li>Brings freshness to every meeting</li>
+                    <li>An eager and curious member</li>
+                </ul>
+            </div>
+            <div class="photo2">
+                <a href="./cvbr.html"><img src="../img/balram.png"></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <!-- Footer content container -->
+            <div class="footer-left">
+                <!-- Left side content of the footer -->
+                <div class="footer-logo">
+                    <!-- Logo section -->
+                    <img src="../img/logo2.png" alt="Chakra logo" />
+                </div>
+                <div class="help-link">
+                    <!-- Link to the feedback form -->
+                    Your Feedback <a  style="font-size: 14px;" href="./feedbackform.html">Click Here</a>
+                </div>
+            </div>
+
+            <div class="footer-sections">
+                <!-- Section for the footer links -->
+                <div class="footer-column">
+                    <!-- Column for Company-related links -->
+                    <h4>Company</h4>
+                    <ul>
+                        <a href="./about.html" style="text-decoration: none; color: whitesmoke;font-size: 14px">
+                            <li>About Us</li>
+                        </a>
+                        <a style="text-decoration: none; color: whitesmoke;font-size: 14px"
+                            href="https://www.google.com/maps/place/Islington+College/@27.7076565,85.3226561,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1908434cb3c5:0x1fdf1a6d41d2512d!8m2!3d27.7076565!4d85.3252364!16s%2Fm%2F0wblb79?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
+                            target="_blank">
+                            <li>Store Locater</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <!-- Column for Contact information -->
+                    <ul>
+                        <li>Email: chakra00@gmail.com</li>
+                        <li>Support: +01-550 467</li>
+                        <li>Phone: +977 9879843728</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Policies</h4>
+                    <!-- Column for Policies -->
+                    <ul>
+                        <li><a  style="font-size: 14px;" href="./policy.html"> Shipping & Order Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <!-- Copyright information -->
+            Copyright 2025 &copy; Chakra
+        </div>
+    </footer>
+    <script src="../js/javascript.js">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../css/style.css">
+
+<head>
+    <title>Feedback</title>
+    <meta name="keyword" content="impact of technology, Watch Industry, Chakra">
+    <!--meta tags help to give meta data they help in better seo performance-->
+    <meta name="description" content="About the team of Chakra" />
+    <meta name="author" content="Chakra's Team">
+    <style>
+        /* internal css*/
+        /* Style for the form group, adding space below each form element */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Label style to ensure it's displayed as a block and with some space below */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Input and textarea field styling, making them responsive and adding padding */
+        input,
+        textarea {
+            width: 100%;
+            /* Make input fields full-width */
+            padding: 8px;
+            /* Padding inside the input fields */
+            margin-bottom: 5px;
+            /* Space below each input field */
+            border: 1px solid #ddd;
+            /* Border color */
+        }
+
+        /* Style for error messages to make them stand out in red */
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        /* Button styling: green background, white text, padding, and pointer cursor */
+        button {
+            background-color: #4CAF50;
+            /* Green background */
+            color: white;
+            /* White text color */
+            padding: 10px 20px;
+            /* Button padding */
+            border: none;
+            /* No border */
+            cursor: pointer;
+            /* Change cursor to pointer when hovered */
+            margin-left: 200px;
+            /* Move button to the right */
+        }
+
+        /* Container style to center the form and add padding and border */
+        .container {
+            max-width: 500px;
+            /* Limit container width */
+            margin: 90px auto 120px auto;
+            /* Center the container and add top/bottom margin */
+            padding: 20px;
+            /* Padding inside the container */
+            border: 1px solid #ddd;
+            /* Light border around the container */
+        }
+    </style>
+</head>
+<!-- Header -->
+<header>
+    <div class="logo">
+        <a href="../index.html"><img src="../img/logo.png"
+                alt="Chakra Logo" /></a><!-- Logo section, clicking on the logo takes you to the homepage -->
+    </div>
+    <nav class="main-nav">
+        <!-- Main navigation menu -->
+        <a href="../index.html">Home</a><!-- Home page link -->
+        <a href="./Product.html">Products</a><!-- Products page link -->
+        <a href="./blog.html">Blog</a>
+        <!-- Blog page link -->
+        <a href="./research.html">Research</a><!-- Research page link -->
+        <a href="./about.html">About Us</a><!-- About Us page link -->
+        <div class="cart-icon" onclick="toggleCart()">
+            <!-- Shopping cart icon  triggers toggleCart function when clicked -->
+            <img src="../img/cart2.jpg" alt="Shopping Cart Icon" />
+            <span id="cartCount">0</span><!-- Shows the number of items in the cart initially 0-->
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="container" style="margin-top: 120px;">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm" onsubmit="return validateForm()">
+            <!--calls the JavaScript function validateForm() when the form is submitted.-->
+            <div class="form-group">
+                <label
+                    for="name">Name:</label><!-- makes it user friendly as it directs us to the input box that its describing as it is linked using id and for-->
+                <input type="text" id="name" name="name">
+                <span id="nameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <!-- Label for email input field -->
+                <label for="email">Email:</label>
+                <!-- Email input field -->
+                <input type="email" id="email" name="email">
+                <!-- Span for displaying email error messages -->
+                <span id="emailError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <!-- Label for message textarea -->
+                <label for="message">Message:</label>
+                <!-- Message input area -->
+                <textarea id="message" name="message" rows="4"></textarea>
+                <!-- Span for displaying message error messages -->
+                <span id="messageError" class="error"></span>
+            </div>
+
+
+            <button type="submit">Submit</button><!--submit button-->
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Footer content container -->
+            <div class="footer-left">
+                <!-- Left side content of the footer -->
+                <div class="footer-logo">
+                    <!-- Logo section -->
+                    <img src="../img/logo2.png" alt="Chakra logo" />
+                </div>
+                <div class="help-link">
+                    <!-- Link to the feedback form -->
+                    Your Feedback <a href="./feedbackform.html">Click Here</a>
+                </div>
+            </div>
+
+            <div class="footer-sections">
+                <!-- Section for the footer links -->
+                <div class="footer-column">
+                    <!-- Column for Company-related links -->
+                    <h4>Company</h4>
+                    <ul>
+                        <a href="./about.html" style="text-decoration: none; color: whitesmoke">
+                            <li>About Us</li>
+                        </a>
+                        <a style="text-decoration: none; color: whitesmoke"
+                            href="https://www.google.com/maps/place/Islington+College/@27.7076565,85.3226561,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1908434cb3c5:0x1fdf1a6d41d2512d!8m2!3d27.7076565!4d85.3252364!16s%2Fm%2F0wblb79?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
+                            target="_blank">
+                            <li>Store Locater</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <!-- Column for Contact information -->
+                    <ul>
+                        <li>Email: chakra00@gmail.com</li>
+                        <li>Support: +01-550 467</li>
+                        <li>Phone: +977 9879843728</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Policies</h4>
+                    <!-- Column for Policies -->
+                    <ul>
+                        <li><a href="./policy.html"> Shipping & Order Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <!-- Copyright information -->
+            Copyright 2025 &copy; Chakra
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            // Get form elements
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Reset error messages
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("messageError").innerHTML = "";
+
+            // Check if fields are empty
+            var isValid = true;
+
+            if (name == "") {
+                document.getElementById("nameError").innerHTML = "Please enter your name";
+                isValid = false;
+            }
+
+            if (email == "") {
+                document.getElementById("emailError").innerHTML = "Please enter your email";
+                isValid = false;
+            }
+
+            if (message == "") {
+                document.getElementById("messageError").innerHTML = "Please enter a message";
+                isValid = false;
+            }
+
+            if (email != "" && !email.includes("@")) {
+                document.getElementById("emailError").innerHTML = "Please enter a valid email";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+                return true;
+            }
+            else {
+                return isValid;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

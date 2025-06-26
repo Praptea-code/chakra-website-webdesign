@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="keyword" content="impact of technology, Watch Industry, Chakra"><!--meta tags help to give meta data they help in better seo performance-->
+  <meta name="description" content="Chakra" />
+  <meta name="author" content="Chakra's Team">
+    <title>Chakra</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--internal css-->
+    <style>
+        * {
+            border: 0;
+            /* removes borders */
+            margin: 0;
+            /* removes margins */
+            box-sizing: border-box;
+            /* ensures padding/border are included in width/height */
+            font-family: sans-serif !important;
+            /* applies sans-serif font globally */
+        }
+
+        .video {
+            height: 150px;
+            /* sets video height */
+            width: 100%;
+            /* makes video width 100% */
+        }
+
+        .video video {
+            object-fit: cover;
+            /* makes video cover area */
+            width: 100%;
+            /* sets video width */
+            overflow-x: hidden;
+            /* hides horizontal overflow */
+        }
+
+        .bs p {
+            color: #2d1314;
+            /* sets text color */
+            font-size: 42px;
+            /* sets font size */
+            font-weight: bold;
+            /* bolds text */
+            text-align: center;
+            /* centers text */
+            margin: 150px 0px 100px 0px;
+            /* adds spacing around text */
+        }
+
+        .bs p:hover {
+            color: #050547;
+            /* hover color */
+        }
+
+        .bestselling :hover {
+            color: #b30505;
+            /* hover color for bestselling items */
+        }
+
+        .bt {
+            color: #2d1314;
+            /* sets text color */
+            font-size: 42px;
+            /* sets font size */
+            font-weight: bold;
+            /* bolds text */
+            text-align: center;
+            /* centers text */
+            padding: 80px;
+            /* adds padding around text */
+        }
+
+        .bt p:hover {
+            color: #050547;
+            /* hover color */
+        }
+
+        .backgroundimg {
+            background-image: url(./img/pexels-ian-panelo-7349322\ .jpg);
+            /* sets background image */
+            background-repeat: no-repeat;
+            /* no repeat of the image */
+            background-size: cover;
+            /* ensures image covers the area */
+            padding-bottom: 100px;
+            /* adds space at the bottom */
+        }
+
+        .bestselling {
+            display: flex;
+            /* turns into a flex container */
+            justify-content: space-evenly;
+            /* spaces items evenly */
+            padding-bottom: 75px;
+            /* adds space below */
+            justify-content: center;
+            /* centers items */
+            gap: 20px;
+            /* spaces items evenly */
+        }
+
+        .bestselling a {
+            text-decoration: none;
+            /* removes underline from links */
+        }
+
+        .bestselling p {
+            display: flex;
+            /* uses flex layout */
+            justify-content: space-around;
+            /* spaces items evenly */
+            padding-top: 30px;
+            /* adds space at top */
+            font-size: 18px;
+            /* sets font size */
+            color: #2d1314;
+            /* sets text color */
+        }
+
+        .featured-image {
+            overflow: hidden;
+            /* hides overflow */
+            border-radius: 8px;
+            /* rounds the corners */
+        }
+
+        .bestselling img {
+            display: flex;
+            /* flexes the image */
+            justify-content: space-between;
+            /* spaces items evenly */
+            height: auto;
+            /* auto height */
+            width: 320px;
+            /* sets image width */
+            padding: 35px 10px;
+            /* adds padding */
+            object-fit: cover;
+            /* ensures image covers the area */
+            transition: transform 0.3s ease;
+            /* smooth transition for hover effect */
+        }
+
+        .bestselling img:hover {
+            transform: scale(3);
+            /* zooms in on hover */
+        }
+
+        .flex {
+            display: flex !important;
+            /* uses flex layout */
+            overflow: hidden;
+            /* hides overflow */
+            gap: 70px;
+            /* adds space between items */
+            align-items: center;
+            /* centers items vertically */
+            justify-content: center;
+            /* centers items horizontally */
+        }
+
+        .bytype img {
+            display: flex;
+            /* flexes the image */
+            justify-content: space-evenly;
+            /* spaces items evenly */
+            padding: 40px;
+            /* adds padding */
+            height: 600px;
+            /* sets image height */
+            width: 600px;
+            /* sets image width */
+        }
+
+        .bytype a {
+            text-decoration: none;
+        }
+
+        .bytype p {
+            display: flex;
+            /* flexes the paragraph */
+            justify-content: space-evenly;
+            /* spaces items evenly */
+            color: #2d1314;
+            /* sets text color */
+            font-size: 30px;
+            /* sets font size */
+            margin-bottom: 80px;
+            /* adds margin at the bottom */
+        }
+
+        .bytype p:hover {
+            color: #b30505;
+            /* hover color */
+        }
+
+        .features {
+            display: flex;
+            /* uses flex layout */
+            justify-content: space-evenly;
+            /* spaces items evenly */
+            background-color: black;
+            /* sets background color */
+            height: 950px;
+            /* sets height */
+            padding: 0 50px;
+            /* adds horizontal padding */
+        }
+
+        .features p {
+            color: #f0f4f5;
+            /* sets text color */
+            text-align: justify;
+            /* justifies text */
+            font-size: 20px;
+            /* sets font size */
+        }
+
+        .features img {
+            height: 345px;
+            /* sets image height */
+            width: 345px;
+            /* sets image width */
+            margin: auto;
+            /* centers the image */
+            padding: 30px;
+            /* adds padding */
+        }
+
+        .feedback {
+            display: flex;
+            /* uses flex layout */
+            justify-content: space-between;
+            /* spaces items evenly */
+            padding: 80px;
+            /* adds padding */
+        }
+
+        .review {
+            background-color: #2d1314;
+            /* sets background color */
+            padding: 20px;
+            /* adds padding */
+            width: 400px;
+            /* sets width */
+            border-radius: 10px;
+            /* rounds corners */
+            text-align: center;
+            /* centers text */
+            box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.3);
+            /* adds shadow */
+        }
+
+        .review p {
+            /* sets font */
+            font-size: 18px;
+            /* sets font size */
+            color: white;
+            /* sets text color */
+        }
+
+        .review img {
+            margin-top: 15px;
+            /* adds space at top */
+            width: 50px;
+            /* sets image width */
+            height: 50px;
+            /* sets image height */
+        }
+
+        .feedback .star {
+            color: #cca001;
+            /* sets star color */
+        }
+
+        .blogredirect {
+            text-align: center;
+            /* centers text */
+            font-size: 20px;
+            /* sets font size */
+            color: #2c3e50;
+            /* sets text color */
+            background-color: white;
+            /* sets background color */
+            padding: 20px;
+            /* adds padding */
+            width: 68%;
+            /* sets width */
+            margin: 124px auto;
+            /* centers the block */
+            box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.3);
+            /* adds shadow */
+            border-radius: 8px;
+            /* rounds corners */
+        }
+
+        .blogredirect0 {
+            display: flex;
+            /* uses flex layout */
+            font-size: 19px;
+            /* sets font size */
+            font-weight: 400px;
+            /* sets font weight */
+        }
+
+        .blogredirect0 img {
+            height: 306px;
+            /* sets image height */
+            padding: 20px;
+            /* adds padding */
+        }
+
+        .blogredirect h3 {
+            display: inline;
+            /* keeps heading inline */
+            border-bottom: 3px solid black;
+            /* adds bottom border */
+            margin-bottom: 24px;
+            /* adds margin at bottom */
+            padding: 2px;
+            /* adds padding */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- the actual content-->
+    <header>
+        <!-- introductory content-->
+        <div class="logo">
+            <!--- nav bar-->
+            <a href="./index.html"><!--linked to home--><img src="img/logo.png" alt="Chakra Logo"
+                    style="margin-left: -60px" /></a>
+        </div>
+        <nav class="main-nav">
+            <a href="./index.html">Home</a><!--linked to home-->
+            <a href="./html/Product.html">Products</a><!--linked to products-->
+            <a href="./html/blog.html">Blog</a><!--linked to blog-->
+            <a href="./html/research.html">Research</a><!--linked to research-->
+            <a href="./html/about.html">About Us</a><!--linked to about us-->
+            <div class="cart-icon" onclick="toggleCart()">
+                <img src="./img/cart2.jpg" alt="Shopping Cart Icon" />
+                <span id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="video">
+        <video src="./video/videobg.mp4" autoplay muted loop>
+            <!-- inserting a video element which is muted doesnt have controls autoplays in a loop-->
+        </video>
+    </div>
+
+    <div class="backgroundimg">
+        <div class="brandname">
+            <p style="
+            color: aliceblue;
+            font-size: 95px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 250px;
+            padding-bottom: 50px;
+          ">
+                CHAKRA
+            </p>
+            <!--used inline css here because it lies on top of heirarchy and we dont want that style to be overridden-->
+            <p style="
+            color: aliceblue;
+            font-size: medium;
+            text-align: center;
+            padding-bottom: 450px;
+          ">
+                Till Eternity <br />
+                1998
+            </p>
+        </div>
+        <div class="bs">
+            <p>BEST SELLING</p>
+        </div>
+        <section class="bestselling">
+            <!--best selling section-->
+            <div class="featured-image">
+                <!-- Image and link for Minimalist Silver Mesh Watch -->
+                <a href="./html/Product.html#men"><img src="./img/bestselling1.jpg" class="finalimg" /></a>
+                <a href="./html/Product.html#men">
+                    <p>Minimalist Silver Mesh Watch</p>
+                </a>
+            </div>
+            <div class="featured-image">
+                <!-- Image and link for Minimalist Blue Leather Watch -->
+                <a href="./html/Product.html#sports"><img src="./img/bluewatch.jpg" class="finalimg" /></a>
+                <a href="./html/Product.html#sports">
+                    <p>Minimalist Blue Leather Watch</p>
+                </a>
+            </div>
+            <div class="featured-image">
+                <!-- Image and link for Delicate Rose Gold Watch -->
+                <a href="./html/Product.html#women"><img src="./img/bestselling4.jpg" class="finalimg" /></a>
+                <a href="./html/Product.html#women">
+                    <p>Delicate Rose Gold Watch</p>
+                </a>
+            </div>
+            <div class="featured-image">
+                <!-- Image and link for Sleek Black Chronograph Watch -->
+                <a href="./html/Product.html#sports"><img src="./img/chakra.jpg" class="finalimg" /></a>
+                <a href="./html/Product.html#sports">
+                    <p>Sleek Black Chronograph Watch</p>
+                </a>
+            </div>
+        </section>
+
+        <div class="bt">
+            <!--Watches by type section-->
+            <!-- Title for Watches by Type Section -->
+            <p>SHOP WATCHES BY TYPE</p>
+        </div>
+
+        <section class="bytype">
+            <div class="flex">
+                <div>
+                    <!-- Image and link for Women Watches -->
+                    <a href="./html/Product.html#women"><img src="./img/11.jpg" /></a>
+                    <a href="./html/Product.html#women">
+                        <p>Women</p>
+                    </a>
+                </div>
+                <div>
+                    <!-- Image and link for Men Watches -->
+                    <a href="./html/Product.html#men"><img src="./img/bestselling2.jpg" /></a>
+                    <a href="./html/Product.html#men">
+                        <p>Men</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div>
+                    <!-- Image and link for Kids Watches -->
+                    <a href="./html/Product.html#kids"><img src="./img/pinkkids.jpg" /></a>
+                    <a href="./html/Product.html#kids">
+                        <p>Kids</p>
+                    </a>
+                </div>
+                <div>
+                    <!-- Image and link for Sports Watches -->
+                    <a href="./html/Product.html#sports"><img src="./img/brown.jpg" /></a>
+                    <a href="./html/Product.html#sports">
+                        <p>Sports</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="features">
+        <!-- features of section-->
+        <div>
+            <div>
+                <!-- Quality section -->
+                <p style="text-align: center; margin-top: 20%">Quality</p>
+                <br />
+                <p class="body">
+                    Crafted with precision and attention to detail, each watch embodies
+                    timeless elegance. Built to withstand time, ensuring durability and
+                    unmatched style.
+                </p>
+            </div>
+            <div>
+                <!-- Price section -->
+                <p style="text-align: center; margin-top: 80%">Price</p>
+                <br />
+                <p class="body">
+                    Luxury watches at a price that feels right, delivering unmatched
+                    value. Experience elegance without overspending.
+                </p>
+            </div>
+        </div>
+        <div class="features">
+            <!-- Image showcasing features -->
+            <img src="./img/features.jpg" />
+        </div>
+        <div>
+            <div>
+                <!-- Recycle section (Sustainability) -->
+                <p style="text-align: center; margin-top: 22%">Recycle</p>
+                <br />
+                <p class="body">
+                    Sustainability meets sophistication with eco-conscious materials and
+                    processes. Each watch is a step towards a greener, cleaner future.
+                </p>
+            </div>
+            <div>
+                <!-- Support section (Customer care) -->
+                <p style="text-align: center; margin-top: 88%">Support</p>
+                <br />
+                <p class="body">
+                    Round-the-clock assistance guarantees a smooth and worry-free
+                    experience. From purchase to care, every detail is handled with
+                    dedication.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="fb">
+        <!-- feedback section -->
+        <p style="
+          font-size: 45px;
+          color: #2d1314;
+          text-align: center;
+          padding: 50px;
+        ">
+            Our Happy Clients!
+            <!-- title for the feedback section -->
+        </p>
+    </div>
+
+    <section class="feedback">
+        <!-- section for displaying client reviews -->
+        <div class="review">
+            <!-- first client's review -->
+            <p>
+                The design and quality of the watch are extraordinary. It's not just a
+                watch, it's a statement piece. Very satisfied, absolutely!
+            </p>
+            <img src="img/feedback1.jpg" />
+            <!-- image of the first client -->
+            <p class="star">★★★★★</p>
+            <!-- rating given by the client -->
+        </div>
+
+        <div class="review">
+            <!-- second client's review -->
+            <p>
+                The balance between price and design is perfect. Wearing such a luxury
+                brand really makes me feel proud.
+            </p>
+            <img src="img/feedback2.jpg" />
+            <!-- image of the second client -->
+            <p class="star">★★★★★</p>
+            <!-- rating given by the second client -->
+        </div>
+
+        <div class="review">
+            <!-- third client's review -->
+            <p>
+                This watch truly represents sophistication and environmental
+                consciousness. An exceptional product at the highest level of quality
+                and style.
+            </p>
+            <img src="img/feedback3.jpg" />
+            <!-- image of the third client -->
+            <p class="star">★★★★</p>
+            <!-- rating given by the third client -->
+        </div>
+    </section>
+
+    <section class="blogredirect">
+        <!-- section linking to the blog page -->
+        <h3>Innovation on Your Wrist</h3>
+        <div class="blogredirect0">
+            <!-- image for the blog post -->
+            <img src="./img/impact of technology.jpeg" />
+            <p style="padding-top: 24px; text-align: justify">
+                Technology has become a cornerstone of modern society, transforming
+                communication, education, healthcare, and workplaces while reshaping
+                economic and social landscapes. Despite its benefits, it introduces
+                challenges such as privacy concerns, mental health impacts, and job
+                displacement. Addressing these issues, along with the global digital
+                divide, is crucial to ensuring that technological advancements
+                contribute positively and equitably to the future....
+                <a style="color: maroon" href="./html/blog.html"> read more</a>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <!-- Footer content container -->
+            <div class="footer-left">
+                <!-- Left side content of the footer -->
+                <div class="footer-logo">
+                    <!-- Logo section -->
+                    <img src="./img/logo2.png" alt="Chakra logo" />
+                </div>
+                <div class="help-link">
+                    <!-- Link to the feedback form -->
+                    Your Feedback <a href="./html/feedbackform.html">Click Here</a>
+                </div>
+            </div>
+
+            <div class="footer-sections">
+                <!-- Section for the footer links -->
+                <div class="footer-column">
+                    <!-- Column for Company-related links -->
+                    <h4>Company</h4>
+                    <ul>
+                        <a href="./html/about.html" style="text-decoration: none; color: whitesmoke">
+                            <li>About Us</li>
+                        </a>
+                        <a style="text-decoration: none; color: whitesmoke"
+                            href="https://www.google.com/maps/place/Islington+College/@27.7076565,85.3226561,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1908434cb3c5:0x1fdf1a6d41d2512d!8m2!3d27.7076565!4d85.3252364!16s%2Fm%2F0wblb79?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
+                            target="_blank">
+                            <li>Store Locater</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <!-- Column for Contact information -->
+                    <ul>
+                        <li>Email: chakra00@gmail.com</li>
+                        <li>Support: +01-550 467</li>
+                        <li>Phone: +977 9879843728</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Policies</h4>
+                    <!-- Column for Policies -->
+                    <ul>
+                        <li><a href="./html/policy.html"> Shipping & Order Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <!-- Copyright information -->
+            Copyright 2025 &copy; Chakra
+        </div>
+    </footer>
+    <!--javascript is linked  at the end because if we link it in head it might load first and that is not usually preffered by users and it might lag sometimes or cause some problems-->
+    <script src="./js/javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+* {
+  /*this is applicable for the whole thing*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:sans-serif !important;
+}
+
+body {
+  /*kept this external because these are the fonts we focusing on*/
+  font-family: sans-serif !important; /*thats a fallback font too if the first one is not available then the scond one will be used*/
+  background-color: #eee;
+}
+
+header {
+  display: flex; /*it creates a flexible container and all the elements inside header become flex items they can be aligned the way we want now*/
+  align-items: center; /*center aligning*/
+  justify-content: space-between; /*provides equal space between every element here*/
+  background-color: #2d1314;
+  transition: all 0.3s ease;
+  z-index: 10000; /*this will layer it to the top*/
+}
+
+.logo img {
+  width: 610px;
+  height: 100px;
+  display: block; /*takes whole width of the container and will start a new line*/
+  object-fit: contain; /*wont stretch or distort the picture but like it will like scale it to its largest size possible while maintaining its aspect ratio*/
+}
+
+.main-nav {
+  display: flex;
+  gap: 30px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+.main-nav a:hover {
+  background-color: rgba(255,255,255,0.1); /*a stands for alpha which is opacity*/
+  color: rgb(255, 119, 0);
+}
+
+.sticky {
+  position: fixed; /*that doesnt go away when we scroll and stays there even after when we scroll*/
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sticky .logo img {
+  display: none; /*hides that part without actually affecting the document so the logo disappears in our website as we scroll that*/
+}
+
+footer {
+  padding: 40px 20px;
+  background-color: #2d1314;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column; /*flex items will be placed vertically by default its flexdirection row which places flex items horizontally*/
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 180px;
+  height: auto;
+  cursor: pointer; /*whwn we move cursor over this image our cursor will chnage to pointer*/
+  transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.05); /*increases by 1.05 times*/
+}
+
+/* Help Link */
+.help-link {
+  font-size: 14px; /* Sets font size for help link */
+  margin-bottom: 10px; /* Adds margin below the help link */
+  color: #f0f4f5; /* Light color for the link text */
+}
+
+.help-link a {
+  color: rgb(255, 98, 0); /* Orange color for the link */
+  font-weight: 600; /* Makes the link text bold */
+  text-decoration: underline; /* Underlines the link */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.help-link a:hover {
+  color: rgb(255, 140, 70); /* Changes link color on hover */
+}
+
+/* Footer Sections */
+.footer-sections {
+  display: flex; /* Uses flexbox to align footer columns */
+  gap: 100px; /* Adds space between columns */
+}
+
+/* Footer Column Title */
+.footer-column h4 {
+  font-size: 16px; /* Sets font size for column headings */
+  margin-bottom: 20px; /* Adds space below the heading */
+  font-weight: 600; /* Makes the heading bold */
+  color: #f0f4f5; /* Light color for headings */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.footer-column h4:hover {
+  color: rgb(255, 98, 0); /* Changes color to orange on hover */
+}
+
+/* Footer Column List */
+.footer-column a{
+  text-decoration: none;
+  color: white;
+}
+
+.footer-column a:hover{
+  color: rgb(255, 98, 0);
+}
+
+.footer-column ul {
+  list-style: none; /* Removes default list styling */
+  font-size: 14px; /* Sets font size for list items */
+  color: #f0f4f5; /* Light color for the list text */
+}
+
+.footer-column ul li {
+  margin-bottom: 10px; /* Adds space between list items */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: padding-left 0.3s ease, color 0.3s ease; /* Adds transition effects for padding and color */
+}
+
+.footer-column ul li:hover {
+  padding-left: 5px; /* Adds space to the left when hovered */
+  color: rgb(255, 98, 0); /* Changes text color to orange on hover */
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center; /* Centers the text */
+  padding: 20px 0; /* Adds padding above and below */
+  font-size: 16px; /* Sets font size for copyright text */
+  color: #f0f4f5; /* Light color for the text */
+  border-top: 1px solid #ddd; /* Adds a top border */
+}
+
+/* Cart Icon */
+.cart-icon {
+  background-color: #333; /* Dark background for the cart icon */
+  color: #fff; /* White color for the text */
+  padding: 10px 20px; /* Adds padding inside the icon */
+  border-radius: 5px; /* Rounds the corners */
+  display: flex; /* Uses flexbox to align items inside the icon */
+  align-items: center; /* Vertically aligns items */
+  gap: 10px; /* Adds space between icon and text */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Cart Icon Image */
+.cart-icon img {
+  width: 50px; /* Sets fixed width for the cart icon image */
+  height: auto; /* Adjusts the height automatically to maintain aspect ratio */
+}

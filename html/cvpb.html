@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="keyword" content="impact of technology, Watch Industry, Chakra">
+  <!--meta tags help to give meta data they help in better seo performance-->
+  <meta name="description" content="About the team of Chakra" />
+  <meta name="author" content="Chakra's Team">
+  <title>CV</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- internal css  -->
+  <style>
+    * {
+      margin: 0px auto;
+      /* Resets margin for all elements to 0 and centers them. */
+    }
+
+    .profile_photo {
+      margin-top: 20px;
+      /* Adds space from the top. */
+      margin-left: 25px;
+      /* Adds space from the left. */
+      width: 160px;
+      /* Sets the width of the profile photo. */
+      height: 160px;
+      /* Sets the height of the profile photo. */
+      border: 2px solid whitesmoke;
+      /* Adds a thin border around the photo. */
+      border-radius: 50%;
+      /* Makes the profile photo circular. */
+      overflow: hidden;
+      /* Ensures the image stays within the circular border. */
+    }
+
+    h3 {
+      color: rgb(33, 32, 32);
+      /* Sets the text color to a dark shade. */
+      border: 1px solid #b11010;
+      /* Adds a red border to the h3 element. */
+      text-align: center;
+      /* Centers the text horizontally. */
+    }
+
+    li {
+      padding-right: 100px;
+      /* Adds right padding to list items. */
+    }
+
+    p {
+      padding: 20px;
+      /* Adds padding around the paragraph. */
+    }
+
+    .back a {
+      text-decoration: none;
+      /* Removes the underline from links inside `.back`. */
+    }
+
+    .back {
+      display: flex;
+      /* Uses flexbox to align items. */
+      flex-wrap: wrap;
+      /* Allows wrapping of items if necessary. */
+      margin: 10px 10px 10px 0;
+      /* Adds margin on all sides with no margin on the left. */
+      padding: 10px 20px;
+      /* Adds padding around the back button. */
+      margin: 20px;
+      /* Adds margin around the `.back` container. */
+      font-size: 16px;
+      /* Sets the font size for the button text. */
+      border-radius: 5px;
+      /* Rounds the corners of the button. */
+      border: none;
+      /* Removes the border around the button. */
+      background-color: maroon;
+      /* Sets the background color to maroon. */
+      color: #ffffff;
+      /* Sets the text color to white. */
+      cursor: pointer;
+      /* Changes the cursor to a pointer when hovering over the button. */
+    }
+
+    .back:hover {
+      background-color: #2d1314;
+      /* Changes the background to a darker maroon when hovered. */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- creating wrapper for personal cv -->
+  <div style="background-color: #171817;width: 100%;">
+    <!-- header section -->
+    <header>
+      <!-- Logo section, with a link to the homepage, good use of alt text for accessibility -->
+      <div class="logo">
+        <a href="../index.html"><img src="../img/logo.png" alt="Chakra Logo" style="margin-left: -60px;"></a>
+      </div>
+
+      <!-- Navigation bar with links to different sections of the website, easy to follow -->
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="./Product.html">Products</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./research.html">Research</a>
+        <a href="./about.html">About Us</a>
+
+        <!-- Shopping cart icon with a dynamic cart count, nice touch for user interaction -->
+        <div class="cart-icon" onclick="toggleCart()">
+          <img src="../img/cart2.jpg" alt="Shopping Cart Icon">
+          <span id="cartCount">0</span>
+        </div>
+      </nav>
+    </header>
+    <!-- space between navbar and main tag -->
+    <a style="text-decoration: none;" href="./about.html#team">
+      <button class="back">Back</button>
+    </a>
+    <div style="background-color: #2d1314;width:900px;height: 50px;"></div>
+    <!-- allocating space for main content -->
+    <main style="width: 900px;height:930px;background-color: azure;">
+      <!--name and profile picture container  -->
+      <div style="width: 900px;height: 200px;">
+        <div style="width:670px ;height: 200px;float: left;">
+          <ul style="list-style-type: none;padding: 100px 0 0 20px;">
+            <li><b>Prapti Bhattarai</b></li>
+            <li>contact:+9779868706777</li>
+            <li>Email:pb563@gmail.com</li>
+          </ul>
+        </div>
+        <div style="width: 230px;height: 200px;float: right;">
+          <div style="width: 220px;height: 190px;margin: 0px auto;">
+            <img class="profile_photo" src="../img/prapti.jpeg">
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <!-- container for other details -->
+      <div>
+        <!-- The Objective section clearly states the goal of applying talents to help the firm and grow professionally -->
+        <h3>OBJECTIVE</h3>
+        <p>
+          To get a position in where I can apply my talents and experience to help the firm succeed while also growing
+          professionally.
+        </p>
+      </div>
+
+      <div>
+        <!-- Educational qualifications, but a bit more spacing between the S.L.C and Intermediate qualifications would make it cleaner -->
+        <h3>EDUCATIONAL QUALIFICATION</h3>
+
+        <ul style="list-style-type: none;padding: 20px;">
+          <li>
+            <h4 style="text-align: left;">INTERMEDIATE(+2 Science):</h4>
+            Trinity Int'l College Kathmandu
+            <h4 style="text-align: left;">S.L.C:</h4>
+            S.A.M.T
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <!-- Skills section showing technical expertise, but might add some description of proficiency level for clarity -->
+        <h3>PERSONAL SKILLS</h3>
+        <ul style="padding:20px;">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVA SCRIPT</li>
+          <li>JAVA</li>
+        </ul>
+      </div>
+
+      <div>
+        <!-- Strengths highlight key attributes like attitude and communication skills, well-rounded personal qualities -->
+        <h3>STRENGTHS</h3>
+        <ul style="padding: 20px;">
+          <li>Responsible and positive attitude</li>
+          <li>Self-motivated and focused</li>
+          <li>Communication skills</li>
+        </ul>
+      </div>
+
+      <div>
+        <!-- Hobbies section, shows a glimpse into personal interests like reading and sketching -->
+        <h3>HOBBIES</h3>
+        <p>
+          Reading books, sketching
+        </p>
+      </div>
+
+      <div>
+        <!-- Personal profile gives good contact and background information, but the present and permanent address could be styled differently for distinction -->
+        <h3>PERSONAL PROFILE</h3>
+        <ul style="padding: 20px;">
+          <li>Language Known: English, Nepali </li>
+          <li>Present Address: Sinamangal, Kathmandu.</li>
+          <li>Permanent Address: Sinamangal, Kathmandu</li>
+        </ul>
+      </div>
+    </main>
+    <footer style="background-color: #171817;width: 100%;height: 0px; margin-top: 10px;"></footer>
+    <footer>
+      <div class="footer-content">
+        <!-- Footer content container -->
+        <div class="footer-left">
+          <!-- Left side content of the footer -->
+          <div class="footer-logo">
+            <!-- Logo section -->
+            <img src="../img/logo2.png" alt="Chakra logo" />
+          </div>
+          <div class="help-link">
+            <!-- Link to the feedback form -->
+            Your Feedback <a href="./feedbackform.html">Click Here</a>
+          </div>
+        </div>
+
+        <div class="footer-sections">
+          <!-- Section for the footer links -->
+          <div class="footer-column">
+            <!-- Column for Company-related links -->
+            <h4>Company</h4>
+            <ul>
+              <a href="./about.html" style="text-decoration: none; color: whitesmoke">
+                <li>About Us</li>
+              </a>
+              <a style="text-decoration: none; color: whitesmoke"
+                href="https://www.google.com/maps/place/Islington+College/@27.7076565,85.3226561,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1908434cb3c5:0x1fdf1a6d41d2512d!8m2!3d27.7076565!4d85.3252364!16s%2Fm%2F0wblb79?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank">
+                <li>Store Locater</li>
+              </a>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <!-- Column for Contact information -->
+            <ul>
+              <li>Email: chakra00@gmail.com</li>
+              <li>Support: +01-550 467</li>
+              <li>Phone: +977 9879843728</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Policies</h4>
+            <!-- Column for Policies -->
+            <ul>
+              <li><a href="./policy.html"> Shipping & Order Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <!-- Copyright information -->
+        Copyright 2025 &copy; Chakra
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

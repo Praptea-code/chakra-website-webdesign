@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="keyword" content="impact of technology, Watch Industry, Chakra"><!--meta tags help to give meta data they help in better seo performance-->
+  <meta name="description" content="About the team of Chakra" />
+  <meta name="author" content="Chakra's Team">
+  <title>Michael Kors Watch</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+  
+    p {
+      font-size: 18px;
+      /* sets font size of paragraphs to 18px */
+    }
+
+    .back a {
+      text-decoration: none;
+      /* removes underline from links inside .back */
+    }
+
+    .back {
+      display: flex;
+      /* enables flexbox layout for .back */
+      flex-wrap: wrap;
+      /* allows items to wrap if needed */
+      margin: 10px 10px 10px 0;
+      /* sets margin around .back */
+      padding: 10px 20px;
+      /* adds padding inside the .back */
+      margin: 20px;
+      /* adds margin to all sides */
+      font-size: 16px;
+      /* sets font size to 16px */
+      border-radius: 5px;
+      /* rounds corners of .back */
+      border: none;
+      /* removes border */
+      background-color: #2d1314;
+      /* sets background color to dark red */
+      color: #ffffff;
+      /* sets text color to white */
+      cursor: pointer;
+      /* changes cursor to pointer when hovering */
+    }
+
+    .back:hover {
+      background-color: maroon;
+      /* changes background color when hovered */
+    }
+
+    .product-container {
+      display: flex;
+      /* enables flexbox layout for product container */
+      flex-wrap: wrap;
+      /* allows items to wrap */
+      align-items: flex-start;
+      /* aligns items to the top */
+      justify-content: space-between;
+      /* distributes space evenly between items */
+      margin: 20px;
+      /* adds margin around the container */
+      background: #fff;
+      /* sets background color to white */
+      padding: 20px;
+      /* adds padding inside the container */
+      border-radius: 8px;
+      /* rounds corners of the container */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* adds shadow to the container */
+    }
+
+    .product-container img {
+      flex: 1 1 40%;
+      /* makes the image take 40% of the container's width */
+      max-width: 100%;
+      /* ensures image doesn't exceed container width */
+      height: auto;
+      /* maintains the aspect ratio of the image */
+      border-radius: 8px;
+      /* rounds the corners of the image */
+      margin-right: 20px;
+      /* adds space to the right of the image */
+    }
+
+    .product-details {
+      flex: 1 1 55%;
+      /* makes the product details take 55% of the container's width */
+      display: flex;
+      /* enables flexbox layout for product details */
+      flex-direction: column;
+      /* arranges items in a column */
+      justify-content: space-between;
+      /* adds space between items */
+    }
+
+    .product-details .cart,
+    .product-details .buy {
+      margin: 10px 10px 10px 0;
+      /* adds margin around the buttons */
+      padding: 10px 20px;
+      /* adds padding inside the buttons */
+      font-size: 16px;
+      /* sets font size for buttons */
+      border-radius: 5px;
+      /* rounds the corners of the buttons */
+      border: none;
+      /* removes border */
+      background-color: #2d1314;
+      /* sets button background to dark red */
+      color: white;
+      /* sets text color to white */
+      cursor: pointer;
+      /* changes cursor to pointer on hover */
+    }
+
+    .product-details .cart:hover {
+      background-color: #b8380d;
+      /* changes button background color when hovered */
+    }
+
+    .product-details .buy:hover {
+      background-color: #166d2f;
+      /* changes button background color when hovered */
+    }
+
+    /* New Review System CSS */
+    .review-section {
+      max-width: 1200px;
+      /* sets a maximum width for the review section */
+      margin: 20px auto;
+      /* centers the review section with margin */
+      padding: 20px;
+      /* adds padding inside the review section */
+    }
+
+    .review {
+      border-bottom: 1px solid #ddd;
+      /* adds a subtle bottom border to each review */
+      padding: 15px 20px;
+      /* adds space inside the review */
+      margin-bottom: 15px;
+      /* adds space below each review */
+      background: white;
+      /* sets background color to white */
+      border-radius: 8px;
+      /* rounds the corners of the review */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* adds a light shadow around the review */
+    }
+
+    .review h3 {
+      margin: 0;
+      /* removes margin around the title */
+      font-size: 18px;
+      /* sets the font size for the title */
+      color: #0a1c6e;
+      /* sets title color to dark blue */
+      display: flex;
+      /* enables flexbox layout for the title */
+      align-items: center;
+      /* vertically centers title items */
+    }
+
+    .review .verified {
+      font-size: 14px;
+      /* sets font size for the verified label */
+      color: #0c7625;
+      /* sets color to green */
+      margin-left: 10px;
+      /* adds space to the left of the label */
+      font-weight: bold;
+      /* makes the text bold */
+      background: #e8f5e9;
+      /* sets background color to a light green */
+      padding: 2px 8px;
+      /* adds padding inside the label */
+      border-radius: 12px;
+      /* rounds the corners of the label */
+    }
+
+    .review .rating {
+      font-size: 18px;
+      /* sets font size for the rating */
+      color: #f39c12;
+      /* sets rating color to yellow */
+      margin: 5px 0;
+      /* adds space above and below the rating */
+    }
+
+    .review time {
+      font-size: 14px;
+      /* sets font size for the time/date */
+      color: #666;
+      /* sets color to a grey tone */
+      margin-bottom: 10px;
+      /* adds space below the time */
+      display: block;
+      /* makes the time display as a block element */
+    }
+
+    .review p {
+      font-size: 16px;
+      /* sets font size for the review text */
+      margin: 10px 0;
+      /* adds space above and below the review text */
+      color: #333;
+      /* sets the text color to a dark grey */
+    }
+
+    .review-form {
+      max-width: 650px;
+      /* sets a maximum width for the review form */
+      margin: 20px auto;
+      /* centers the form on the page with margin */
+      background: #fff;
+      /* sets background color to white */
+      padding: 20px;
+      /* adds padding inside the form */
+      border-radius: 8px;
+      /* rounds the corners of the form */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* adds a light shadow around the form */
+    }
+
+    .review-form h3 {
+      margin-bottom: 15px;
+      /* adds space below the form title */
+      color: #444;
+      /* sets title color to a dark grey */
+    }
+
+    .review-form textarea,
+    .review-form input[type="text"],
+    .review-form input[type="email"] {
+      width: 100%;
+      /* makes the input fields take full width */
+      padding: 10px;
+      /* adds padding inside the input fields */
+      margin-bottom: 15px;
+      /* adds space below each input field */
+      border: 1px solid #ccc;
+      /* adds a light grey border around the input fields */
+      border-radius: 5px;
+      /* rounds the corners of the input fields */
+      font-size: 16px;
+      /* sets font size for text input */
+    }
+
+    .review-form select {
+      width: 100%;
+      /* makes the select dropdown take full width */
+      padding: 10px;
+      /* adds padding inside the select dropdown */
+      margin-bottom: 15px;
+      /* adds space below the dropdown */
+      border: 1px solid #ccc;
+      /* adds a light grey border around the dropdown */
+      border-radius: 5px;
+      /* rounds the corners of the dropdown */
+      font-size: 16px;
+      /* sets font size for the select dropdown */
+    }
+
+    .review-form button {
+      background-color: #2d1314;
+      /* sets background color to dark red */
+      color: white;
+      /* sets text color to white */
+      padding: 10px 20px;
+      /* adds padding inside the button */
+      border: none;
+      /* removes the border */
+      border-radius: 5px;
+      /* rounds the corners of the button */
+      cursor: pointer;
+      /* changes cursor to pointer on hover */
+      font-size: 16px;
+      /* sets font size for the button text */
+    }
+
+    .review-form button:hover {
+      background-color: #451b1d;
+      /* changes background color when hovering */
+    }
+
+    .average-rating {
+      text-align: center;
+      /* centers the average rating */
+      margin-bottom: 20px;
+      /* adds space below the average rating */
+      font-size: 24px;
+      /* sets font size for the average rating */
+      color: #f39c12;
+      /* sets color to yellow for the rating */
+    }
+
+    .average-rating span {
+      color: #666;
+      /* sets color to grey for the text */
+      font-size: 16px;
+      /* sets font size for the text */
+    }
+
+    .cart {
+      background-color: #2d1314;
+      /* sets background color to dark red */
+      color: #fff;
+      /* sets text color to white */
+      border: 1px solid black;
+      /* adds black border around the cart button */
+      margin-right: 2%;
+      /* adds space to the right of the cart button */
+    }
+
+    .buy {
+      background-color: #2d1314;
+      /* sets background color to dark red */
+      color: #fff;
+      /* sets text color to white */
+      border: 1px solid black;
+      /* adds black border around the buy button */
+    }
+
+    .cart:hover {
+      background-color: #b8380d;
+      /* changes background color to a darker red when hovering over cart button */
+    }
+
+    .buy:hover {
+      background-color: #166d2f;
+      /* changes background color to green when hovering over buy button */
+    }
+
+    /* Updated Cart overlay styles */
+    .cart-overlay {
+      display: none;
+      /* hides the cart overlay by default */
+      position: fixed;
+      /* fixes the overlay to the screen */
+      top: 50%;
+      /* positions the overlay vertically in the center */
+      left: 50%;
+      /* positions the overlay horizontally in the center */
+      transform: translate(-50%,
+          -50%);
+      /* ensures the overlay is perfectly centered */
+      width: 80%;
+      /* sets the width of the overlay */
+      max-width: 800px;
+      /* sets the maximum width */
+      max-height: 80vh;
+      /* sets the maximum height */
+      background: white;
+      /* sets background color of overlay */
+      padding: 20px;
+      /* adds padding inside the overlay */
+      border-radius: 8px;
+      /* rounds the corners of the overlay */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      /* adds shadow effect to overlay */
+      z-index: 1001;
+      /* ensures the overlay is above other elements */
+      overflow-y: auto;
+      /* allows vertical scrolling inside the overlay */
+    }
+
+    .cart-overlay.active {
+      display: block;
+      /* shows the cart overlay when it's active */
+    }
+
+    .overlay-backdrop {
+      display: none;
+      /* hides the backdrop by default */
+      position: fixed;
+      /* fixes the backdrop to the screen */
+      top: 0;
+      /* positions the backdrop at the top of the screen */
+      left: 0;
+      /* positions the backdrop at the left of the screen */
+      width: 100%;
+      /* makes the backdrop full width */
+      height: 100%;
+      /* makes the backdrop full height */
+      background: rgba(0,
+          0,
+          0,
+          0.5);
+      /* gives the backdrop a semi-transparent black color */
+      z-index: 1000;
+      /* places the backdrop below the overlay */
+    }
+
+    .overlay-backdrop.active {
+      display: block;
+      /* shows the backdrop when it's active */
+    }
+
+    .cart-item {
+      display: flex;
+      /* uses flexbox to display cart item */
+      align-items: center;
+      /* aligns the cart items vertically in the center */
+      padding: 15px;
+      /* adds padding inside the cart item */
+      border-bottom: 1px solid #ddd;
+      /* adds a light grey border below the cart item */
+      margin-bottom: 10px;
+      /* adds space below each cart item */
+    }
+
+    .cart-item img {
+      width: 100px;
+      /* sets the image width */
+      height: 100px;
+      /* sets the image height */
+      object-fit: cover;
+      /* ensures the image covers the space without stretching */
+      border-radius: 4px;
+      /* rounds the corners of the image */
+      margin-right: 20px;
+      /* adds space to the right of the image */
+    }
+
+    .cart-item-details {
+      flex: 1;
+      /* allows the cart item details to take up remaining space */
+    }
+
+    .remove-btn {
+      padding: 5px 10px;
+      /* adds padding inside the remove button */
+      background: #ff4444;
+      /* sets the background color to red */
+      color: white;
+      /* sets text color to white */
+      border: none;
+      /* removes any border */
+      border-radius: 4px;
+      /* rounds the corners */
+      cursor: pointer;
+      /* changes cursor to pointer on hover */
+    }
+
+    .close-cart {
+      float: right;
+      /* floats the close button to the right */
+      font-size: 24px;
+      /* increases the font size of the close button */
+      cursor: pointer;
+      /* changes cursor to pointer on hover */
+      padding: 5px;
+      /* adds padding inside the close button */
+    }
+
+    .cart-total {
+      margin-top: 20px;
+      /* adds space on top of the cart total */
+      padding-top: 15px;
+      /* adds padding above the border */
+      border-top: 2px solid #ddd;
+      /* adds a grey top border */
+      text-align: right;
+      /* aligns the text to the right */
+      font-size: 18px;
+      /* sets font size */
+      font-weight: bold;
+      /* makes the font bold */
+    }
+
+    .checkout-btn {
+      display: block;
+      /* makes the button a block element */
+      width: 200px;
+      /* sets the width of the button */
+      margin: 20px 0 0 auto;
+      /* adds margin to position the button to the right */
+      padding: 10px;
+      /* adds padding inside the button */
+      background-color: #166d2f;
+      /* sets the background color to green */
+      color: white;
+      /* sets text color to white */
+      border: none;
+      /* removes any border */
+      border-radius: 5px;
+      /* rounds the corners of the button */
+      cursor: pointer;
+      /* changes cursor to pointer on hover */
+      font-weight: bold;
+      /* makes the text bold */
+    }
+
+    .checkout-btn:hover {
+      background-color: #0d4d1f;
+      /* changes background color to darker green on hover */
+    }
+
+    .notification {
+      position: fixed;
+      /* fixes the notification to the screen */
+      top: 20px;
+      /* positions it 20px from the top */
+      right: 20px;
+      /* positions it 20px from the right */
+      background: #166d2f;
+      /* sets the background color to green */
+      color: white;
+      /* sets text color to white */
+      padding: 10px 20px;
+      /* adds padding inside the notification */
+      border-radius: 4px;
+      /* rounds the corners of the notification */
+      z-index: 1000;
+      /* ensures the notification is above other elements */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cart Overlay -->
+  <!-- Overlay backdrop that appears when cart is active -->
+  <div class="overlay-backdrop"></div>
+
+  <!-- Shopping cart overlay that contains the cart items and controls -->
+  <div class="cart-overlay">
+    <!-- Button to close the cart -->
+    <span class="close-cart">&times;</span>
+
+    <!-- Title of the cart section -->
+    <h2>Your Shopping Cart</h2>
+
+    <!-- Container where cart items are dynamically added -->
+    <div id="cart-items">
+      <!-- Placeholder message when the cart is empty -->
+      <div class="empty-cart">Your cart is empty</div>
+    </div>
+
+    <!-- Section that displays the total cost -->
+    <div class="cart-total">Total: Rs. <span id="cart-total">0.00</span></div>
+
+    <!-- Button to proceed with checkout -->
+    <button class="checkout-btn" onclick="checkout()">
+      Proceed to Checkout
+    </button>
+  </div>
+
+  <!-- Header section that contains the logo and navigation bar -->
+  <header>
+    <!-- Logo section with a link to the homepage -->
+    <div class="logo">
+      <a href="../index.html">
+        <!-- Logo image with a left margin to adjust its position -->
+        <img src="../img/logo.png" alt="Chakra Logo" style="margin-left: -60px" />
+      </a>
+    </div>
+
+    <!-- Main navigation bar with links to different pages -->
+    <nav class="main-nav">
+      <!-- Link to the homepage -->
+      <a href="../index.html">Home</a>
+
+      <!-- Link to the products page -->
+      <a href="./Product.html">Products</a>
+
+      <!-- Link to the blog page -->
+      <a href="./blog.html">Blog</a>
+
+      <!-- Link to the research page -->
+      <a href="./research.html">Research</a>
+
+      <!-- Link to the about us page -->
+      <a href="./about.html">About Us</a>
+
+      <!-- Shopping cart icon with a clickable function to toggle the cart view -->
+      <div class="cart-icon" onclick="toggleCart()">
+        <!-- Cart icon image -->
+        <img src="../img/cart2.jpg" alt="Shopping Cart Icon" />
+        <!-- Cart item count displayed next to the icon -->
+        <span id="cartCount">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Link to go back to the previous product page -->
+  <a style="text-decoration: none" href="./Product.html">
+    <button class="back">Back</button>
+  </a>
+
+  <!-- Main container for the product page -->
+  <section class="product-container">
+    <!-- Product image -->
+    <img src="../img/men1.jpg" alt="Classic Michael Kors Watch" width="150px" height="auto" />
+
+    <!-- Product details section -->
+    <div class="product-details">
+      <!-- Product title -->
+      <h2>Classic Michael Kors Watch</h2>
+      <br />
+      <!-- Product price -->
+      <p>Price: Rs. 8,999.99</p>
+
+      <!-- Buttons to add to cart and buy now -->
+      <div>
+        <button onclick="addToCart()" class="cart">Add to Cart</button>
+        <button onclick="buy()" class="buy">Buy Now</button>
+      </div>
+
+      <!-- Product description -->
+      <div class="product-description">
+        <h3>Product Description</h3>
+        <p>
+          A subtle yet striking addition to anyone's watch collection,
+          showcasing exceptional craftsmanship and style. This watch is
+          powered by the T9081 in-house caliber movement, ensuring precise
+          timekeeping.
+        </p>
+      </div>
+
+      <!-- Product specifications -->
+      <div class="product-specifications">
+        <h3 style="margin-top: 32px">Product Specifications</h3>
+        <ul style="margin-right: 20px">
+          <li><strong>Movement:</strong> Seiko Quartz</li>
+          <li><strong>Dial:</strong> Silver</li>
+          <li><strong>Case Material:</strong> 316L Steel & Aluminum</li>
+          <li><strong>Case Diameter:</strong> 42mm</li>
+          <li><strong>Case Back:</strong> Metal</li>
+          <li><strong>Case Thickness:</strong> 12mm</li>
+          <li><strong>Water Resistance:</strong> 10 ATM</li>
+          <li><strong>Battery Life:</strong> 2+ years</li>
+          <li><strong>Watch Weight:</strong> 130 grams</li>
+          <li><strong>Warranty:</strong> 24 months on movement</li>
+          <li><strong>Customization:</strong> Available</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review section for customer feedback -->
+  <div class="review-section">
+    <!-- Title for the customer reviews -->
+    <h2>Customer Reviews</h2>
+
+    <!-- Container for individual reviews -->
+    <div id="reviews-container">
+      <!-- First review -->
+      <div class="review">
+        <h3>Raynard Shakya<span class="verified">Verified Buyer</span></h3>
+        <!-- Rating for the product -->
+        <div class="rating">★★★★★</div>
+        <!-- Date of the review -->
+        <time>14/01/25</time>
+        <!-- Review text -->
+        <p>Perfect watch worth every penny.</p>
+      </div>
+
+      <!-- Second review -->
+      <div class="review">
+        <h3>Prabesh Karki<span class="verified">Verified Buyer</span></h3>
+        <!-- Rating for the product -->
+        <div class="rating">★★★★★</div>
+        <!-- Date of the review -->
+        <time>15/01/25</time>
+        <!-- Review text -->
+        <p>
+          Very stylish watch, looks premium. Very convenient and comfortable
+          to see the time.
+        </p>
+      </div>
+    </div>
+
+    <!-- Review form for submitting new feedback -->
+    <div class="review-form">
+      <h3>Write a Review</h3>
+      <!-- Form for submitting a review -->
+      <form id="review-form" onsubmit="submitReview(event)">
+        <!-- Name input -->
+        <input type="text" id="name" placeholder="Your Name*" required />
+        <!-- Email input -->
+        <input type="email" id="email" placeholder="Your Email*" required />
+
+        <!-- Rating selection dropdown -->
+        <select id="rating" required>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select>
+
+        <!-- Review text area -->
+        <textarea id="review-text" placeholder="Write your review here*" rows="5" required></textarea>
+
+        <!-- Submit button for the review -->
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <!-- Footer content container -->
+      <div class="footer-left">
+        <!-- Left side content of the footer -->
+        <div class="footer-logo">
+          <!-- Logo section -->
+          <img src="../img/logo2.png" alt="Chakra logo" />
+        </div>
+        <div class="help-link">
+          <!-- Link to the feedback form -->
+          Your Feedback <a href="./feedbackform.html">Click Here</a>
+        </div>
+      </div>
+
+      <div class="footer-sections">
+        <!-- Section for the footer links -->
+        <div class="footer-column">
+          <!-- Column for Company-related links -->
+          <h4>Company</h4>
+          <ul>
+            <a href="./about.html" style="text-decoration: none; color: whitesmoke">
+              <li>About Us</li>
+            </a>
+            <a style="text-decoration: none; color: whitesmoke"
+              href="https://www.google.com/maps/place/Islington+College/@27.7076565,85.3226561,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1908434cb3c5:0x1fdf1a6d41d2512d!8m2!3d27.7076565!4d85.3252364!16s%2Fm%2F0wblb79?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank">
+              <li>Store Locater</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <!-- Column for Contact information -->
+          <ul>
+            <li>Email: chakra00@gmail.com</li>
+            <li>Support: +01-550 467</li>
+            <li>Phone: +977 9879843728</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Policies</h4>
+          <!-- Column for Policies -->
+          <ul>
+            <li><a href="./policy.html"> Shipping & Order Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <!-- Copyright information -->
+      Copyright 2025 &copy; Chakra
+    </div>
+  </footer>
+  <script>
+    let cartItems = []; // Array to store cart items
+    let cartTotal = 0; // It tracks the total amount
+
+    function addToCart() {
+      //Get product info when "Add to cart" is clicked
+      const product = event.target.closest(".product-container");
+      const priceText = product
+        .querySelector("p")
+        .textContent.replace("Price: Rs. ", "");
+      const price = parseFloat(priceText.split(" ").pop().replace(",", ""));
+
+      // creates product object with details
+      const productData = {
+        name: product.querySelector("h3").textContent,
+        price: price,
+        image: product.querySelector("img").src,
+      };
+
+      // Add item to cart and updates display
+      cartItems.push(productData);
+      cartTotal += price;
+      updateCartDisplay();
+      updateCartCount();
+      showNotification("Item added to cart");
+    }
+
+    function updateCartDisplay() {
+      const cartContainer = document.getElementById("cart-items");
+      cartContainer.innerHTML = "";
+
+      // Shows "empty-cart" message if no items on cart
+      if (cartItems.length === 0) {
+        cartContainer.innerHTML =
+          '<div class="empty-cart">Your cart is empty</div>';
+        document.getElementById("cart-total").textContent = "0.00";
+        return;
+      }
+
+      // Create HTML for each cart item
+      cartItems.forEach((item, index) => {
+        const cartItem = document.createElement("div");
+        cartItem.className = "cart-item";
+        cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <h3>${item.name}</h3>
+                        <p>Rs. ${item.price.toFixed(2)}</p>
+                    </div>
+                    <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+                `;
+        cartContainer.appendChild(cartItem);
+      });
+
+      document.getElementById("cart-total").textContent =
+        cartTotal.toFixed(2);
+    }
+
+    function removeFromCart(index) {
+      // removes item and update the cart
+      cartTotal -= cartItems[index].price;
+      cartItems.splice(index, 1);
+      updateCartDisplay();
+      updateCartCount();
+      showNotification("Item removed from cart");
+    }
+
+    function updateCartCount() {
+      // Updates the cart count in the header
+      document.getElementById("cartCount").textContent = cartItems.length;
+    }
+
+    function toggleCart() {
+      // Show/hides the card overlay
+      document.querySelector(".cart-overlay").classList.toggle("active");
+      document.querySelector(".overlay-backdrop").classList.toggle("active");
+    }
+
+    // Event Listeners for closing cart
+    document
+      .querySelector(".close-cart")
+      .addEventListener("click", toggleCart);
+    document
+      .querySelector(".overlay-backdrop")
+      .addEventListener("click", toggleCart);
+
+    function checkout() {
+      if (cartItems.length > 0) {
+        alert(
+          `Checkout successful! Total amount paid: Rs. ${cartTotal.toFixed(
+            2
+          )}`
+        );
+        // Resets cart after checkout
+        cartItems = [];
+        cartTotal = 0;
+        updateCartDisplay();
+        updateCartCount();
+        toggleCart();
+        showNotification("Checkout completed successfully");
+      } else {
+        alert("Your cart is empty!");
+      }
+    }
+
+    function showNotification(message) {
+      // create and shows temporary notification
+      const notification = document.createElement("div");
+      notification.className = "notification";
+      notification.textContent = message;
+      document.body.appendChild(notification);
+      setTimeout(() => notification.remove(), 3000);
+    }
+
+    function buy() {
+      alert("The item has been successfully purchased");
+    }
+    function submitReview(event) {
+      event.preventDefault();
+
+      // Get form values
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const rating = document.getElementById("rating").value;
+      const reviewText = document.getElementById("review-text").value;
+
+      // Validate inputs
+      if (!name || !email || !rating || !reviewText) {
+        alert("Please fill in all required fields");
+        return;
+      }
+
+      // Create new review element
+      const reviewElement = document.createElement("div");
+      reviewElement.className = "review";
+
+      // Get current date
+      const currentDate = new Date();
+      const formattedDate = `${currentDate.getDate()}/${currentDate.getMonth() + 1
+        }/${currentDate.getFullYear()}`;
+
+      // Create review HTML
+      reviewElement.innerHTML = `
+                <h3>${name}<span class="verified">Verified Buyer</span></h3>
+                <div class="rating">${"★".repeat(rating)}${"☆".repeat(
+        5 - rating
+      )}</div>
+                <time>${formattedDate}</time>
+                <p>${reviewText}</p>
+            `;
+
+      // Add new review to the top of the reviews container
+      const reviewsContainer = document.getElementById("reviews-container");
+      reviewsContainer.insertBefore(
+        reviewElement,
+        reviewsContainer.firstChild
+      );
+
+      // Reset form
+      document.getElementById("review-form").reset();
+
+      // Show success message
+      alert("Thank you for your review!");
+    }
+  </script>
+</body>
+
+</html>

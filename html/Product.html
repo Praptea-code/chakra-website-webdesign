@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="keyword" content="impact of technology, Watch Industry, Chakra"><!--meta tags help to give meta data they help in better seo performance-->
+  <meta name="description" content="Watches" />
+  <meta name="author" content="Chakra's Team">
+  <title>Watch Products</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    * {
+      margin: 0;
+      /*removes all the outer spacing around an element*/
+      padding: 0;
+      /*removes all the inner spacing around an element*/
+      box-sizing: border-box;
+      /*padding and border are included in the total height and width*/
+    }
+
+    /* Image Slider */
+    .slider {
+      width: 90%;
+      /* sets width to 90% of the parent container */
+      height: 650px;
+      /* sets height to 650px */
+      margin: 20px auto;
+      /* centers the slider with 20px margin on top and bottom */
+      overflow: hidden;
+      /* hides anything that overflows ie that exceds the page */
+      box-shadow: 5px 5px 10px rgb(76, 8, 8);
+      /* adds a shadow with 5px horizontal, 5px vertical, and 10px blur */
+      background-color: black;
+      /* makes the background black */
+      border-radius: 8px;
+      /* rounds the corners with 8px radius */
+    }
+
+    .slider img {
+      width: 1530px;
+      /* sets width to 1530px */
+      height: 650px;
+      /* sets height to 650px */
+      object-fit: cover;
+      /*It covers the entire container 
+            while maintaining its aspect ratio, cropping if necessary */
+    }
+
+    /* Section styles */
+    .section {
+      padding: 20px;
+      /* sets padding to 20px inside the section */
+      border-bottom: 1px solid #ddd;
+      /* adds a 1px solid bottom border with a light gray color */
+      background-color: #fff;
+      /* sets background color to white */
+      margin: 20px 0;
+      /* adds 20px margin on top and bottom */
+    }
+
+    .section h2 {
+      background-color: #333;
+      /* sets background color to dark gray */
+      color: #fff;
+      /* sets text color to white */
+      padding: 10px 20px;
+      /* adds 10px padding on top/bottom and 20px on left/right */
+      margin-bottom: 20px;
+      /* adds 20px margin at the bottom */
+      text-align: center;
+      /* centers the text */
+      border-radius: 5px;
+      /* rounds the corners with a 5px radius */
+    }
+
+    /* Product Section */
+    .products {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* indivisual Product */
+    .product {
+      border: 1px solid #ddd;
+      /* sets a border of 1 px width which is solid of creamish color*/
+      border-radius: 8px;
+      /*rounds the corners by 8px*/
+      padding: 15px;
+      /*adds 15px space inside border and the content*/
+      width: 295px;
+      /*sets the width to 295px*/
+      background-color: #fff;
+      /*sets the color to white*/
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      /* adds a shadow with 0px horizontal, 3px vertical, 10px blur, and 10% opacity black */
+      transition: transform 0.3s;
+      /* makes the element smoothly transform over 0.3 seconds */
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      /* moves the element 5px upwards */
+    }
+
+    .product img {
+      width: 100%;
+      /* sets width to 100% of the container */
+      height: auto;
+      /* sets the height to auto*/
+      border-radius: 5px;
+      /* makes the edges softer by 5px*/
+      transition: transform 0.3s;
+      /* smoothly transforms in 0.3 secionds*/
+    }
+
+    .product img:hover {
+      transform: scale(1.05);
+      /* increase the the original size by 1.05 times*/
+    }
+
+    .product h3 {
+      font-size: 18px;
+      /* makes the font size 18 px*/
+      margin: 15px 0;
+      /* spacing outside the border  in top and bottom is 15px and left right is 0px*/
+      color: #333;
+      /* sets the color of text grey*/
+      text-align: center;
+      /*centers the text*/
+    }
+
+    .product p {
+      color: #555;
+      /* sets the color of the text in a shade of gray*/
+      margin: 10px 0;
+      /* spacing outside the border  in top and bottom is 10px and left right is 0px*/
+      text-align: center;
+      /* centers the text*/
+      font-weight: bold;
+      /* makes the text bold*/
+    }
+
+    .product a:link {
+      text-decoration: none;
+      /* removed the underline of the link*/
+    }
+
+    .product button {
+      width: 48%;
+      /* makes the width 48% of the container*/
+      padding: 10px 15px;
+      /* sets 10px padding on top/bottom and 15px on left/right */
+      border-radius: 5px;
+      /* rounds the corners with a 5px radius */
+      cursor: pointer;
+      /* changes the cursor to a pointer on hover */
+      font-weight: bold;
+      /* makes the text bold */
+      transition: background-color 0.3s;
+      /* smoothly changes the background color over 0.3 seconds */
+    }
+
+    .cart {
+      background-color: #2d1314;
+      /* sets background color to dark red */
+      color: #fff;
+      /* sets text color to white */
+      border: 1px solid black;
+      /* adds a 1px solid black border */
+      margin-right: 2%;
+      /* adds 2% margin to the right */
+    }
+
+    .buy {
+      background-color: #2d1314;
+      /* sets background color to dark red */
+      color: #fff;
+      /* sets text color to white */
+      border: 1px solid black;
+      /* adds a 1px solid black border */
+    }
+
+    .cart:hover {
+      background-color: #b8380d;
+      /* sets background color to  red on hover*/
+    }
+
+    .buy:hover {
+      background-color: #166d2f;
+      /* sets background color to green on hover */
+    }
+
+    .cart-overlay {
+      display: none;
+      /* hides the element initially */
+      position: fixed;
+      /* fixes the element so it stays in place on the screen */
+      top: 50%;
+      /* moves the element to the center of the screen */
+      left: 50%;
+      /* places the element in the center from the left side of the screen */
+      transform: translate(-50%, -50%);
+      /* moves the element back by half of its width and height to perfectly center it */
+      width: 80%;
+      /* makes the element 80% of the screen width */
+      max-width: 800px;
+      /* limits the width to a maximum of 800px */
+      max-height: 800px;
+      /* limits the height to a maximum of 800px */
+      background: white;
+      /* sets the background color to white */
+      padding: 20px;
+      /* adds 20px of space inside the element  */
+      border-radius: 8px;
+      /* rounds the corners to make them smooth */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      /* adds a shadow around the element to make it pop */
+      z-index: 1001;
+      /* makes sure the element stays on top of other things on the page */
+      overflow-y: auto;
+      /* lets you scroll vertically if the content is too tall */
+    }
+
+    .cart-overlay.active {
+      display: block;
+      /* makes the cart overlay appear on the screen when it's active */
+    }
+
+    .overlay-backdrop {
+      display: none;
+      /* initially hides the overlay */
+      position: fixed;
+      /* keeps the overlay fixed in place on the screen */
+      top: 0;
+      /* places the overlay at the top-left corner of the screen */
+      left: 0;
+      /* places the overlay at the top-left corner of the screen */
+      width: 100%;
+      /* makes the overlay cover the whole screen */
+      height: 100%;
+      /* makes the overlay cover the whole screen */
+      background: rgba(0, 0, 0, 0.5);
+      /* gives the background a dark see-through effect */
+      z-index: 1000;
+      /* ensures the overlay is above other content */
+    }
+
+    .overlay-backdrop.active {
+      display: block;
+      /* makes the overlay visible when it has the active class */
+    }
+
+    .cart-item {
+      display: flex;
+      /* makes the cart item display as a flexible container */
+      align-items: center;
+      /* vertically centers the items inside the cart item */
+      padding: 15px;
+      /* adds 15px of padding inside the cart item */
+      border-bottom: 1px solid #ddd;
+      /* adds a 1px solid light gray border at the bottom */
+      margin-bottom: 10px;
+      /* adds 10px margin at the bottom of the cart item */
+    }
+
+    .cart-item img {
+      width: 100px;
+      /* sets the image size to 100px */
+      height: 100px;
+      /* sets the image size to 100px */
+      object-fit: cover;
+      /* ensures the image fits the container without stretching */
+      border-radius: 4px;
+      /* rounds the image corners with a 4px radius */
+      margin-right: 20px;
+      /* adds 20px of space to the right of the image */
+    }
+
+    .cart-item-details {
+      flex: 1;
+      /* makes the details section fill up the rest of the space next to the image */
+    }
+
+    .remove-btn {
+      padding: 5px 10px;
+      /* adds 5px top/bottom and 10px left/right padding */
+      background: #ff4444;
+      /* gives the button a red background */
+      color: white;
+      /* sets the text color to white */
+      border: none;
+      /* removes the button's border */
+      border-radius: 4px;
+      /* rounds the button's corners */
+      cursor: pointer;
+      /* changes the cursor to a pointer on hover */
+    }
+
+    .close-cart {
+      float: right;
+      /* moves the close button to the right */
+      font-size: 24px;
+      /* sets the font size of the close button to 24px */
+      cursor: pointer;
+      /* changes the cursor to a pointer on hover */
+      padding: 5px;
+      /* adds 5px padding inside the close button */
+    }
+
+    .cart-total {
+      margin-top: 20px;
+      /* adds 20px space on top */
+      padding-top: 15px;
+      /* adds 15px padding to the top */
+      border-top: 2px solid #ddd;
+      /* adds a 2px solid light gray border at the top */
+      text-align: right;
+      /* aligns the text to the right */
+      font-size: 18px;
+      /* sets the font size to 18px */
+      font-weight: bold;
+      /* makes the text bold */
+    }
+
+    .checkout-btn {
+      display: block;
+      /* makes the checkout button take up a full line */
+      width: 200px;
+      /* sets the width of the button to 200px */
+      margin: 20px 0 0 auto;
+      /* adds 20px margin at the top, 0 on sides, and auto to the left for centering */
+      padding: 10px;
+      /* adds 10px padding inside the button */
+      background-color: #166d2f;
+      /* sets the button background to a dark green */
+      color: white;
+      /* changes the text color to white */
+      border: none;
+      /* removes the button's border */
+      border-radius: 5px;
+      /* rounds the button's corners */
+      cursor: pointer;
+      /* changes the cursor to a pointer on hover */
+      font-weight: bold;
+      /* makes the button text bold */
+    }
+
+    .checkout-btn:hover {
+      background-color: #0d4d1f;
+      /* changes the button's background color when hovering */
+    }
+
+    .notification {
+      position: fixed;
+      /* positions the notification fixed*/
+      top: 20px;
+      /* positions the notification at top*/
+      right: 20px;
+      /* positions the notification at right*/
+      background: #166d2f;
+      /* gives the notification a green background */
+      color: white;
+      /* changes the notification text to white */
+      padding: 10px 20px;
+      /* adds 10px top/bottom and 20px left/right padding */
+      border-radius: 4px;
+      /* rounds the notification's corners */
+      z-index: 1000;
+      /* ensures the notification stays on top of other content */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cart Overlay -->
+  <div class="overlay-backdrop"></div>
+  <div class="cart-overlay">
+    <!-- the main cart popup container -->
+    <span class="close-cart">&times;</span><!-- close button for the cart popup -->
+    <h2>Your Shopping Cart</h2>
+    <!-- cart title -->
+    <div id="cart-items">
+      <!-- section where cart items will show -->
+      <div class="empty-cart">Your cart is empty</div>
+      <!-- message when cart has no items -->
+    </div>
+    <div class="cart-total">
+      <!-- shows the total price of items in the cart -->
+      Total: Rs. <span id="cart-total">0.00</span><!-- display of total price (initially 0) -->
+    </div>
+    <button class="checkout-btn" onclick="checkout()">
+      Proceed to
+      Checkout</button><!-- button that triggers the checkout process when clicked onclick calls the checkout() function to handle the action -->
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="../index.html"><img src="../img/logo.png"
+          alt="Chakra Logo" /></a><!-- Logo section, clicking on the logo takes you to the homepage -->
+    </div>
+    <nav class="main-nav">
+      <!-- Main navigation menu -->
+      <a href="../index.html">Home</a><!-- Home page link -->
+      <a href="./Product.html">Products</a><!-- Products page link -->
+      <a href="./blog.html">Blog</a>
+      <!-- Blog page link -->
+      <a href="./research.html">Research</a><!-- Research page link -->
+      <a href="./about.html">About Us</a><!-- About Us page link -->
+      <div class="cart-icon" onclick="toggleCart()">
+        <!-- Shopping cart icon  triggers toggleCart function when clicked -->
+        <img src="../img/cart2.jpg" alt="Shopping Cart Icon" />
+        <span id="cartCount">0</span><!-- Shows the number of items in the cart initially 0-->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="slider">
+    <!-- Container for the image slider -->
+    <div id="img">
+      <!-- This is where offers is displayed -->
+      <img src="../img/1.png" alt="Offers" /><!-- Displays the offers -->
+    </div>
+  </div>
+
+  <!-- Men's Watches Section -->
+  <section class="section" id="men" style="margin-top: 40px">
+    <!-- Section for displaying men's watches -->
+    <h2>Men's Watches</h2>
+    <!-- Title for the men's watches section -->
+    <div class="products">
+      <!-- Container for all the men's products -->
+      <div class="product">
+        <a href="./Description.html">
+          <!-- Link to detailed description page of the product -->
+          <img src="../img/bestselling1.jpg" alt="Men's Watch 1" />
+          <h3>Minimalist Silver Mesh Watch</h3>
+        </a>
+        <p>Price: Rs. 12,499.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/men2.jpg" alt="Men's Watch 2" />
+          <h3>Vintage Link Watch</h3>
+        </a>
+        <p>Price: Rs. 14,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. --><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/men3.jpg" alt="Men's Watch 3" />
+          <h3>Gold Plated Luxury Watch</h3>
+        </a>
+        <p>Price: Rs. 3,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/men4.jpg" alt="Men's Watch 4" />
+          <h3>Elegant Leather Watch</h3>
+        </a>
+        <p>Price: Rs. 8,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+    </div>
+  </section>
+
+  <!-- Women's Watches Section -->
+  <section class="section" id="women">
+    <h2>Women's Watches</h2>
+    <div class="products">
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/women1.jpg" alt="Women's Watch 1" />
+          <h3>Rose Gold Watch</h3>
+        </a>
+        <p>Price: Rs. 11,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/bestselling4.jpg" alt="Women's Watch 2" />
+          <h3>Delicate Rose Gold Watch</h3>
+        </a>
+        <p>Price: Rs. 8,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/women3.jpg" alt="Women's Watch 3" />
+          <h3>Rose Ceramic Band Watch</h3>
+        </a>
+        <p>Price: Rs. 5,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/women4.jpg" alt="Women's Watch 4" />
+          <h3>Minimalist Watch</h3>
+        </a>
+        <p>
+          Price:
+          <span style="text-decoration: line-through; color: #b8380d">Rs. 4,999.99</span>
+          Rs. 2,999.99<!--used to show discount offer-->
+        </p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+    </div>
+  </section>
+
+  <!-- Kid's Watches Section -->
+  <section class="section" id="kids">
+    <h2>Kid's Watches</h2>
+    <div class="products">
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/kid1.jpg" alt="Kids' Watch 1" />
+          <h3>Cartoon Watch</h3>
+        </a>
+        <p>Price: Rs. 1,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/kid2.jpg" alt="Kids' Watch 2" />
+          <h3>Digital Fun Watch</h3>
+        </a>
+        <p>Price: Rs. 999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/kid3.jpg" alt="Kids' Watch 3" />
+          <h3>Hello Kitty Watch</h3>
+        </a>
+        <p>Price: Rs. 499.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/kid4.jpg" alt="Kids' Watch 4" />
+          <h3>Woody Watch</h3>
+        </a>
+        <p>Price: Rs. 1,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Watches Section -->
+  <section class="section" id="smart">
+    <h2>Smart Watches</h2>
+    <div class="products">
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/smart1.jpg" alt="Smart Watch 1" />
+          <h3>Darker than Black Watch</h3>
+        </a>
+        <p>
+          Price:
+          <span style="text-decoration: line-through; color: #b8380d">Rs. 3,499.99</span>
+          Rs. 1,999.99
+        </p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/smart2.jpg" alt="Smart Watch 2" />
+          <h3>Smartwatch with GPS</h3>
+        </a>
+        <p>Price: Rs. 4,499.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/smart3.jpg" alt="Smart Watch 3" />
+          <h3>Allu Watch</h3>
+        </a>
+        <p>Price: Rs. 1,499.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/smart4.jpg" alt="Smart Watch 4" />
+          <h3>Advanced Health Watch</h3>
+        </a>
+        <p>Price: Rs. 9,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sports Watches Section -->
+  <section class="section" id="sports">
+    <h2>Sports Watches</h2>
+    <div class="products">
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/sport1.jpg" alt="Sports Watch 1" />
+          <h3>Daniel Wellington Watch</h3>
+        </a>
+        <p>Price: Rs. 14,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/bluewatch.jpg" alt="Sports Watch 2" />
+          <h3>Minimalist Blue Leather Watch</h3>
+        </a>
+        <p>Price: Rs. 6,999.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/sport3.jpg" alt="Sports Watch 3" />
+          <h3>Multi-Sport Watch</h3>
+        </a>
+        <p>Price: Rs. 5,499.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+      <div class="product">
+        <a href="./Description.html"><!-- Link to detailed description page of the product -->
+          <img src="../img/chakra.jpg" alt="Sports Watch 4" />
+          <h3>Sleek Black Chronograph Watch</h3>
+        </a>
+        <p>Price: Rs. 6,499.99</p>
+        <button onclick="addToCart()" class="cart">Add to
+          Cart</button><!-- when this button is clicked, the JavaScript function addToCart() is called which typically adds the selected product to the user's shopping cart. -->
+        <button onclick="buy()" class="buy">Buy
+          Now</button><!-- when this button is clicked, the JavaScript function buy() is called which usually handles the process of directly purchasing the product--->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <!-- Footer content container -->
+      <div class="footer-left">
+        <!-- Left side content of the footer -->
+        <div class="footer-logo">
+          <!-- Logo section -->
+          <img src="../img/logo2.png" alt="Chakra logo" />
+        </div>
+        <div class="help-link">
+          <!-- Link to the feedback form -->
+          Your Feedback <a href="./feedbackform.html">Click Here</a>
+        </div>
+      </div>
+
+      <div class="footer-sections">
+        <!-- Section for the footer links -->
+        <div class="footer-column">
+          <!-- Column for Company-related links -->
+          <h4>Company</h4>
+          <ul>
+            <a href="./about.html" style="text-decoration: none; color: whitesmoke">
+              <li>About Us</li>
+            </a>
+            <a style="text-decoration: none; color: whitesmoke"
+              href="https://www.google.com/maps/place/Islington+College/@27.7076565,85.3226561,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1908434cb3c5:0x1fdf1a6d41d2512d!8m2!3d27.7076565!4d85.3252364!16s%2Fm%2F0wblb79?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank">
+              <li>Store Locater</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <!-- Column for Contact information -->
+          <ul>
+            <li>Email: chakra00@gmail.com</li>
+            <li>Support: +01-550 467</li>
+            <li>Phone: +977 9879843728</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Policies</h4>
+          <!-- Column for Policies -->
+          <ul>
+            <li><a href="./policy.html"> Shipping & Order Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <!-- Copyright information -->
+      Copyright 2025 &copy; Chakra
+    </div>
+  </footer>
+
+  <script>
+    let cartItems = []; // Array to store cart items
+    let cartTotal = 0; // It tracks the total amount
+
+    function addToCart() {
+      // this function adds the selected product to the shopping cart
+      const product = event.target.closest(".product"); // get the closest product that was clicked
+      const priceText = product
+        .querySelector("p")
+        .textContent.replace("Price: Rs. ", ""); // extract and clean up the price from the text
+      const price = parseFloat(priceText.split(" ").pop().replace(",", ""));
+
+      // creates product object with details
+      const productData = {
+        name: product.querySelector("h3").textContent,
+        price: price,
+        image: product.querySelector("img").src,
+      };
+
+      // Add item to cart and updates display
+      cartItems.push(productData);
+      cartTotal += price;
+      // update the cart display and count
+      updateCartDisplay();
+      updateCartCount();
+      // show a notification that the item was added to the cart
+      showNotification("Item added to cart");
+    }
+    // this function updates the cart display with the items in it
+    function updateCartDisplay() {
+      const cartContainer = document.getElementById("cart-items");
+      cartContainer.innerHTML = ""; // clear the cart display
+
+      // Shows "empty-cart" message if no items on cart
+      if (cartItems.length === 0) {
+        cartContainer.innerHTML =
+          '<div class="empty-cart">Your cart is empty</div>';
+        document.getElementById("cart-total").textContent = "0.00";
+        return;
+      }
+
+      // Create HTML for each cart item
+      cartItems.forEach((item, index) => {
+        const cartItem = document.createElement("div");
+        cartItem.className = "cart-item";
+        cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <h3>${item.name}</h3>
+                        <p>Rs. ${item.price.toFixed(2)}</p>
+                    </div>
+                    <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+                `;
+        cartContainer.appendChild(cartItem);
+      });
+      // update the total price of items in the cart
+      document.getElementById("cart-total").textContent =
+        cartTotal.toFixed(2);
+    }
+    // this function removes an item from the cart
+    function removeFromCart(index) {
+      // removes item and update the cart
+      cartTotal -= cartItems[index].price;
+      // remove the item from the cart array
+      cartItems.splice(index, 1);
+      // update the cart display and count
+      updateCartDisplay();
+      updateCartCount();
+      // show a notification that the item was removed
+      showNotification("Item removed from cart");
+    }
+
+    function updateCartCount() {
+      // Updates the cart count in the header
+      document.getElementById("cartCount").textContent = cartItems.length;
+    }
+
+    function toggleCart() {
+      // Show/hides the card overlay
+      document.querySelector(".cart-overlay").classList.toggle("active");
+      document.querySelector(".overlay-backdrop").classList.toggle("active");
+    }
+
+    // Event Listeners for closing cart
+    document
+      .querySelector(".close-cart")
+      .addEventListener("click", toggleCart);
+    document
+      .querySelector(".overlay-backdrop")
+      .addEventListener("click", toggleCart);
+
+    function checkout() {
+      if (cartItems.length > 0) {
+        alert(
+          `Checkout successful! Total amount paid: Rs. ${cartTotal.toFixed(
+            2
+          )}`
+        );
+        // Resets cart after checkout
+        cartItems = [];
+        cartTotal = 0;
+        updateCartDisplay();
+        updateCartCount();
+        // close the cart overlay
+        toggleCart();
+        showNotification("Checkout completed successfully");
+      } else {
+        // if the cart is empty, show an alert
+        alert("Your cart is empty!");
+      }
+    }
+
+    function showNotification(message) {
+      // create and shows temporary notification
+      const notification = document.createElement("div");
+      notification.className = "notification";
+      notification.textContent = message;
+      document.body.appendChild(notification);
+      setTimeout(() => notification.remove(), 3000);
+    }
+
+    function buy() {
+      // this function simulates buying the item immediately
+      alert("The item has been successfully purchased");
+    }
+
+    // Image slider functionality
+    var images = [
+      "../img/1.png",
+      "../img/2.png",
+      "../img/3.png",
+      "../img/4.png",
+    ];
+    var x = 0;
+    var imgs = document.getElementById("img");
+
+    function slider() {
+      // this function changes the image in the slider every 3 seconds
+      if (x < images.length) {
+        x = x + 1;
+      } else {
+        x = 1;
+      }
+      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+    }
+
+    setInterval(slider, 3000); // call the slider function every 3 seconds
+  </script>
+
+  <!-- External JavaScript for Nav -->
+  <script src="../js/javascript.js"></script>
+</body>
+
+</html>

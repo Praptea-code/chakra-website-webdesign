@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="keyword" content="impact of technology, Watch Industry, Chakra"><!--meta tags help to give meta data they help in better seo performance-->
+  <meta name="description" content="About the team of Chakra" />
+  <meta name="author" content="Chakra's Team">
+    <title>Research</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        body {
+            background-color: #fff !important;
+            /* prevents it from being overridden at any cost*/
+        }
+
+        .r1,
+        .r2,
+        .r3,
+        .r4,
+        .r5,
+        .r6 {
+            /*they all have same attribute here so we can collectively give them styles like this */
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .img {
+            display: flex;
+            justify-content: space-evenly;
+            height: 400px;
+            width: auto;
+            /*automatically adjusts*/
+            padding: 17px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+            /*justifies the text*/
+            padding: 50px;
+        }
+
+        .research {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            overflow-x: hidden;
+            /*clips the extra portion in x axis or horizontally*/
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            /* vertically and horizontally no offset its is centered and soft blur due to 8px blur radius with black color 20%opacity*/
+        }
+
+        .reference {
+            font-size: 25px;
+            font-weight: bolder;
+            /*makes them appear thick*/
+            color: #2d1314;
+            margin-left: 28%;
+            /*will position the part that is in reference class to 35% left*/
+        }
+
+        .ourWebsite {
+            font-size: 25px;
+            font-weight: bolder;
+            color: #2d1314;
+            margin-left: 32%;
+            /*will position the part that is in ourWebsite class to 35% left*/
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/logo.png"
+                    alt="Chakra Logo" /></a><!-- Logo section, clicking on the logo takes you to the homepage -->
+        </div>
+        <nav class="main-nav">
+            <!-- Main navigation menu -->
+            <a href="../index.html">Home</a><!-- Home page link -->
+            <a href="./Product.html">Products</a><!-- Products page link -->
+            <a href="./blog.html">Blog</a>
+            <!-- Blog page link -->
+            <a href="./research.html">Research</a><!-- Research page link -->
+            <a href="./about.html">About Us</a><!-- About Us page link -->
+            <div class="cart-icon" onclick="toggleCart()">
+                <!-- Shopping cart icon  triggers toggleCart function when clicked -->
+                <img src="../img/cart2.jpg" alt="Shopping Cart Icon" />
+                <span id="cartCount">0</span><!-- Shows the number of items in the cart initially 0-->
+            </div>
+        </nav>
+    </header>
+    <div class="main-section">
+        <section class="s1">
+            <p style="
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            color: Black;
+          ">
+                Research
+            </p>
+
+            <section class="research">
+                <div class="r1">
+                    <div>
+                        <p class="ourWebsite">
+                            <!-- Our website side-->
+                            Our Webpage
+                        </p>
+                        <img class="img" src="../img/Research2.png" />
+                    </div>
+                    <div>
+                        <p class="reference">
+                            <!-- Reference website side-->
+                            Reference Webpage
+                        </p>
+                        <a target="_blank"
+                            href="https://www.rolex.com/watches?gclid=Cj0KCQiA-aK8BhCDARIsAL_-H9kOosY53g-U4RgMDH_UZ7mmGrr-T792sXQK3EDjWcWnGHKmeN4nXgIaAgwSEALw_wcB&ef_id=Cj0KCQiA-aK8BhCDARIsAL_-H9kOosY53g-U4RgMDH_UZ7mmGrr-T792sXQK3EDjWcWnGHKmeN4nXgIaAgwSEALw_wcB:G:s&s_kwcid=AL!141!3!698943508996!e!!g!!rolex!21272101175!164532934960&gad_source=1"><!--opens the link in other tab-->
+                            <img class="img" src="../img/Research1.png" />
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    The home page of Rolex website starts with a video which made the
+                    homepage really attractive so it was concluded that the homepage of
+                    Chakra should also start with a video. The nav bar of Rolex was not
+                    really as per our liking as it didnot have easy access to other
+                    pages which in our opinion decreases the user friendliness. So, we
+                    decided to put easy access to every other page in our nav bar
+                    promoting a user friendly website. While scrolling we found that
+                    Rolex's navbar didnot have sticky property but as we kept scrolling
+                    and came across the next window the nav bar of Rolex's website
+                    changed and that particular nav bar after the first window was
+                    sticky.Therefore, after taking things in consideration we decided to
+                    give sticky property to navbar and also used javascript to remove
+                    the logo from the next window as it took alot of space.
+                </p>
+            </section>
+            <section class="research">
+                <!-- Research Section 1 -->
+                <div class="r2">
+                    <div>
+                        <!-- Displaying our webpage's image and description -->
+                        <p class="ourWebsite">Our Webpage</p>
+                        <img class="img" src="../img/Research4.png" />
+                    </div>
+                    <div>
+                        <!-- Displaying reference webpage's image and link -->
+                        <p class="reference">Reference Webpage</p>
+                        <a target="_blank" href="https://watchesnepal.com/">
+                            <img class="img" src="../img/Research3.png" />
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Watches Nepal had a specific section in their homepage which
+                    elaborated the highlights of their brand. This idea was very likable
+                    because a customer knowing about the highlights about a brand might
+                    convince the customer to buy from their brand. So, we also decided
+                    to make this a part of our homepage.
+                </p>
+            </section>
+
+            <section class="research">
+                <!-- Research Section 2 -->
+                <div class="r3">
+                    <div>
+                        <!-- Displaying our webpage's image and description -->
+                        <p class="ourWebsite">Our Webpage</p>
+                        <img class="img" src="../img/Research5.png" />
+                    </div>
+                    <div>
+                        <!-- Displaying reference webpage's image and link -->
+                        <p class="reference">Reference Webpage</p>
+                        <a target="_blank"
+                            href="https://www.titannepal.com/?srsltid=AfmBOorw-tixHvP6qeOMYJFOGjXvOYbAFM-0Lc9lTLQYEQfePc7QyKeI">
+                            <img class="img" src="../img/Research6.png" />
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Titan features a section highlighting their best selling products
+                    which makes it easier for users to know about popular items. We came
+                    to conclusion that keeping this in our website doesnt have any
+                    negative aspect but only positive aspects so we kept best selling
+                    section in our homepage as well. The product cards in both designs
+                    are visually focused, displaying images, product names, and prices
+                    prominently. Additionally, both websites adopt a clean and minimal
+                    layout, ensuring the design does not distract the users.
+                </p>
+            </section>
+
+            <section class="research">
+                <!-- Research Section 3 -->
+                <div class="r5">
+                    <div>
+                        <!-- Displaying our webpage's image and description -->
+                        <p class="ourWebsite">Our Webpage</p>
+                        <img class="img" src="../img/Research11.png" />
+                    </div>
+                    <div>
+                        <!-- Displaying reference webpage's image and link -->
+                        <p class="reference">Reference Webpage</p>
+                        <a target="_blank"
+                            href="https://www.titannepal.com/?srsltid=AfmBOorw-tixHvP6qeOMYJFOGjXvOYbAFM-0Lc9lTLQYEQfePc7QyKeI">
+                            <img class="img" src="../img/Research12.png" />
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    The Titan website's footer has a clean and minimal layout including
+                    everything that is necessary. Therefore we took Titan as our main
+                    reference for footer part. We also added the copyright symbol in our
+                    website footer because it informs visitors that the content is
+                    protected by copyright law. This protects the website owner's
+                    intellectual property and prevents unauthorized use of their
+                    content.
+                </p>
+            </section>
+
+            <section class="research">
+                <!-- Research Section 4 -->
+                <div class="r6">
+                    <div>
+                        <!-- Displaying our webpage's image and description -->
+                        <p class="ourWebsite">Our Webpage</p>
+                        <img class="img" src="../img/Research15.png" />
+                    </div>
+                    <div>
+                        <!-- Displaying reference webpage's image and link -->
+                        <p class="reference">Reference Webpage</p>
+                        <a target="_blank"
+                            href="https://www.daraz.com.np/products/millenium-sleek-design-square-shape-waterproof-quartz-watch-for-men-i129050388-s1037042577.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Awatch%253Bnid%253A129050388%253Bsrc%253ALazadaMainSrp%253Brn%253A47464033072117d3cf3d29409d3bbff8%253Bregion%253Anp%253Bsku%253A129050388_NP%253Bprice%253A1599%253Bclient%253Adesktop%253Bsupplier_id%253A900152235146%253Bbiz_source%253Ahttps%253A%252F%252Fwww.daraz.com.np%252F%253Bslot%253A0%253Butlog_bucket_id%253A470687%253Basc_category_id%253A7764%253Bitem_id%253A129050388%253Bsku_id%253A1037042577%253Bshop_id%253A41818%253BtemplateInfo%253A&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Bagmati%20Province&price=1599&priceCompare=skuId%3A1037042577%3Bsource%3Alazada-search-voucher%3Bsn%3A47464033072117d3cf3d29409d3bbff8%3BoriginPrice%3A159900%3BdisplayPrice%3A159900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1737077023513&ratingscore=4.615384615384615&request_id=47464033072117d3cf3d29409d3bbff8&review=91&sale=580&search=1&source=search&spm=a2a0e.searchlist.list.0&stock=1">
+                            <img class="img" src="../img/Research16.png" />
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    After the product page when we clicked on a particular product in
+                    Daraz, we noticed that the specifications of the object were not
+                    side by side with the object. We had to scroll down for the
+                    specifications. This didn't seem user friendly to us so we decided
+                    to change this and put the specifications side by side with the
+                    object in our Chakra website.
+                </p>
+            </section>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Footer content container -->
+            <div class="footer-left">
+                <!-- Left side content of the footer -->
+                <div class="footer-logo">
+                    <!-- Logo section -->
+                    <img src="../img/logo2.png" alt="Chakra logo" />
+                </div>
+                <div class="help-link">
+                    <!-- Link to the feedback form -->
+                    Your Feedback <a href="./feedbackform.html">Click Here</a>
+                </div>
+            </div>
+
+            <div class="footer-sections">
+                <!-- Section for the footer links -->
+                <div class="footer-column">
+                    <!-- Column for Company-related links -->
+                    <h4>Company</h4>
+                    <ul>
+                        <a href="./about.html" style="text-decoration: none; color: whitesmoke">
+                            <li>About Us</li>
+                        </a>
+                        <a style="text-decoration: none; color: whitesmoke"
+                            href="https://www.google.com/maps/place/Islington+College/@27.7076565,85.3226561,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb1908434cb3c5:0x1fdf1a6d41d2512d!8m2!3d27.7076565!4d85.3252364!16s%2Fm%2F0wblb79?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
+                            target="_blank">
+                            <li>Store Locater</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <!-- Column for Contact information -->
+                    <ul>
+                        <li>Email: chakra00@gmail.com</li>
+                        <li>Support: +01-550 467</li>
+                        <li>Phone: +977 9879843728</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Policies</h4>
+                    <!-- Column for Policies -->
+                    <ul>
+                        <li><a href="./policy.html"> Shipping & Order Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <!-- Copyright information -->
+            Copyright 2025 &copy; Chakra
+        </div>
+    </footer>
+    <script src="../js/javascript.js"></script>
+    <!--linking external js-->
+</body>
+
+</html>
